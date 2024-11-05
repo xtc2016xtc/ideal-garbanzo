@@ -1,3 +1,5 @@
+import React from "react";
+
 export const dynamic = 'force-dynamic'
 
 import type { Metadata } from "next";
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   title: "银行交易",
   description: "银行交易.",
   icons: {
-    icon: '/icons/logo.svg'
+    icon:'/icons/logo.svg',
   }
 };
 
@@ -25,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="zh-CN">
+      <html lang="en">
       <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>{children}</body>
       </html>
   );
