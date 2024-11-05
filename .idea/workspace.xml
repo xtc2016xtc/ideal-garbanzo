@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="添加配置">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="添加配置" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +76,7 @@
       <workItem from="1730798123309" duration="606000" />
       <workItem from="1730798795340" duration="1439000" />
       <workItem from="1730800438725" duration="119000" />
-      <workItem from="1730802711469" duration="171000" />
+      <workItem from="1730802711469" duration="545000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -112,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730802817437</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加配置">
+      <option name="closed" value="true" />
+      <created>1730803247472</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730803247472</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
