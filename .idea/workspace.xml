@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="添加配置" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="添加配置">
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/sign-in/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/sign-up/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/from/AuthForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -25,6 +35,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2oQO1pEqi0qGbmU2XKZZls32P04" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -46,6 +59,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app\(root)" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -76,7 +94,11 @@
       <workItem from="1730798123309" duration="606000" />
       <workItem from="1730798795340" duration="1439000" />
       <workItem from="1730800438725" duration="119000" />
-      <workItem from="1730802711469" duration="545000" />
+      <workItem from="1730802711469" duration="710000" />
+      <workItem from="1730803492298" duration="177000" />
+      <workItem from="1730936914062" duration="39000" />
+      <workItem from="1730937098063" duration="17000" />
+      <workItem from="1730937244706" duration="8976000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -118,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730803247472</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加配置">
+      <option name="closed" value="true" />
+      <created>1730803397766</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730803397766</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
