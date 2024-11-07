@@ -3,7 +3,7 @@ const AuthForm = ({type}:{type:string}) => {
         <div>
             {type === 'sign-in' && (
                 <>
-                    登录
+                    sign-in
                 </>
             )}
             {type === 'sign-up' && (
