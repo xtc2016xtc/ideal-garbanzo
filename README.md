@@ -17,7 +17,19 @@ bun dev
 
 打开 [http://localhost:3000](http://localhost:3000)
 
-本项目功能有
+# 便捷阅读导航
+<ui>
+    <li><a href="#kj">框架安装教程</a></li>
+    <li><a href="#jg">项目结构</a></li>
+    <li><a href="#tailwindcss">项目主题配置</a></li>
+    <li><a href="#css">ui组件样式</a></li>
+</ui>
+
+
+
+
+
+# 项目所有功能
 <details>
 <summary><code>汇总</code></summary>
 
@@ -26,9 +38,10 @@ bun dev
 ```
 
 
+
 </details>
 
-# <a href="https://ui.shadcn.com/">安装shadcn/ui框架</a>
+# <a href="https://ui.shadcn.com/" id="kj">安装shadcn/ui框架</a>
 
 ### 第一步
 ```bash
@@ -66,7 +79,7 @@ export default function Home() {
 
 
 ```
-# 项目结构
+# <a id="jg">项目结构</a>
 ## 顶级文件夹
 ### 顶级文件夹用于组织应用程序的代码和静态资产。
 
@@ -248,7 +261,7 @@ export default function Home() {
     </tr>
 </table>
 
-## 添加tailwindcss配置
+## <a id="tailwindcss">添加tailwindcss配置</a>
 <details>
 <summary><code>tailwind.config.ts</code></summary>
 
@@ -368,7 +381,7 @@ export default config;
 
 </details>
 
-## 增加项目所需样式
+## <a id="css">增加项目所需样式</a>
 <details>
 <summary><code>globals.css</code></summary>
 
