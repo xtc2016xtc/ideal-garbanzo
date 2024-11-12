@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="编写文档">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="修改缺少的一部分文档（部分内容）">
+      <change afterPath="$PROJECT_DIR$/src/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_11_7_17_40____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行签出之前于_2024_11_7_17_40_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/from/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/from/AuthForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +116,8 @@
       <workItem from="1730937098063" duration="17000" />
       <workItem from="1730937244706" duration="8976000" />
       <workItem from="1731030394371" duration="8053000" />
-      <workItem from="1731283412255" duration="9060000" />
+      <workItem from="1731283412255" duration="9184000" />
+      <workItem from="1731371461711" duration="11330000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -198,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731318047467</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改缺少的一部分文档（部分内容）">
+      <option name="closed" value="true" />
+      <created>1731319253142</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731319253142</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +239,7 @@
     <MESSAGE value="修改bug" />
     <MESSAGE value="表单" />
     <MESSAGE value="编写文档" />
-    <option name="LAST_COMMIT_MESSAGE" value="编写文档" />
+    <MESSAGE value="修改缺少的一部分文档（部分内容）" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改缺少的一部分文档（部分内容）" />
   </component>
 </project>
