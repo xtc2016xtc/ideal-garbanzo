@@ -7,6 +7,7 @@ export default function Home() {
     <div>
       <Button>
           <Link href="/not-found">
+              
               去404 Page Not Found
           </Link>
       </Button>

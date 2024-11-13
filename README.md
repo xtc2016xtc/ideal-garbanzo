@@ -1,5 +1,6 @@
-这是 [Next.js](https://nextjs.org) 项目
-<img src="https://static-mp-27e2abce-1f98-4743-b169-8c5f9ac24dbb.next.bspapp.com/wvuecat/index.png">
+# 项目介绍
+这是 [Next.js](https://nextjs.org) ,连接到多个银行账户的平台显示交易,实时资金转账给其他账户，使用超安全的ssr安全验证,展示账户交易列表和消费类别的主页,一个页面，可以在其中查看所有已链接的银行和交易列表,
+以及付款页面，可以在其中转账
 
 ## 开始
 
@@ -35,7 +36,7 @@ bun dev
 <summary><code>汇总</code></summary>
 
 ```md
-
+# 使用服务器端渲染路由嵌套布局以及使用ts的可重复的表单管理
 ```
 
 
