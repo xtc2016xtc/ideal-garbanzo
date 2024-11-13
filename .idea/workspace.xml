@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="修改bug">
+      <change afterPath="$PROJECT_DIR$/src/app/not-found/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/from/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/from/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/sign-in/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/sign-up/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/from/AuthForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +66,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -54,7 +74,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start (1).executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;background.image.plus&quot;,
     &quot;ts.external.directory.path&quot;: &quot;F:\\projectXTC\\Ruest\\poject\\webstron\\ideal-garbanzo\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -69,6 +92,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app\(root)" />
     </key>
   </component>
@@ -109,7 +133,8 @@
       <workItem from="1730937244706" duration="8976000" />
       <workItem from="1731030394371" duration="8053000" />
       <workItem from="1731283412255" duration="9184000" />
-      <workItem from="1731371461711" duration="11868000" />
+      <workItem from="1731371461711" duration="12014000" />
+      <workItem from="1731456388142" duration="1941000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -215,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731404435360</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="修改bug">
+      <option name="closed" value="true" />
+      <created>1731404711358</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731404711358</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -855,7 +855,7 @@ app/
     ├── (auth)/
     └── (root)/
 ```
-    
+
 
 ### 将page.tsx移动到(root)
 ```Plaintext
