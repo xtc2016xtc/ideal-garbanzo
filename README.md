@@ -18,6 +18,7 @@ bun dev
 
 打开 [http://localhost:3000](http://localhost:3000)
 
+
 # 便捷阅读导航
 <ui>
     <li><a href="#kj">框架安装教程</a></li>
@@ -35,8 +36,10 @@ bun dev
 <details>
 <summary><code>汇总</code></summary>
 
-```md
+```text
 # 使用服务器端渲染路由嵌套布局以及使用ts的可重复的表单管理
+
+
 ```
 
 
