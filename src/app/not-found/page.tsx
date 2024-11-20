@@ -4,7 +4,7 @@ import { Loader } from "lucide-react";
 
 const Notfound = () => {
     return (
-        <div className="flex flex-col bg-black text-white">
+        <div className="flex flex-col bg-black text-black-1">
             {/* eslint-disable-next-line react/jsx-no-undef */}
             正在检测网络...请稍后...<Loader className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gray-900" />
         </div>
