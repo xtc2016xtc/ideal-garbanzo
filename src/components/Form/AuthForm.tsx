@@ -25,8 +25,11 @@ const AuthForm = ({type}:{type:string}) => {
                         )
                      }
                      <p className="text-16 font-normal text-gray-600">
-                         {type == 'sign-in'
-
+                         {type == 'sign-in' && (
+                             <div>
+                                登录，请输入你的密码
+                             </div>
+                         )
                          }
                      </p>
                  </h1>
