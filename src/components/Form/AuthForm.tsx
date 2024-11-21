@@ -35,6 +35,11 @@ const AuthForm = ({type}:{type:string}) => {
                  </h1>
                </div>
            </header>
+            {/*连接银行*/}
+            <div className="flex flex-col gap-4">
+                链接银行
+            </div>
+
         </section>
     )
 }
