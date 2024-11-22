@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="调整">
-      <change afterPath="$PROJECT_DIR$/src/app/(root)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/README.md" afterDir="false" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="布局调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +129,7 @@
       <workItem from="1731974300020" duration="9643000" />
       <workItem from="1732060619979" duration="9952000" />
       <workItem from="1732146056242" duration="7278000" />
-      <workItem from="1732235689751" duration="6679000" />
+      <workItem from="1732235689751" duration="14695000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -335,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732242784206</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="布局调整">
+      <option name="closed" value="true" />
+      <created>1732248213345</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732248213345</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,6 +371,7 @@
     <MESSAGE value="调整tailwindcss配置" />
     <MESSAGE value="居中调整" />
     <MESSAGE value="调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整" />
+    <MESSAGE value="布局调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="布局调整" />
   </component>
 </project>

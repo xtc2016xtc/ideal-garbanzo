@@ -1,10 +1,4 @@
 <div align="center">
-  <br />
-    <a href="https://youtu.be/PuOVqP_cjkE?feature=shared" target="_blank">
-      <img src="https://github.com/adrianhajdin/banking/assets/151519281/3c03519c-7ebd-4539-b598-49e63d1770b4" alt="Project Banner">
-    </a>
-  <br />
-  
   <div>
     <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
     <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
@@ -12,40 +6,26 @@
     <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
   </div>
 
-  <h3 align="center">A Fintech Bank Application</h3>
+  <h3 align="center">银行收款</h3>
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
+  
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
+## 📋 <a name="table">目录</a>
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Code Snippets to Copy](#snippets)
-6. 🔗 [Assets](#links)
-7. 🚀 [More](#more)
+1. 🤖 [介绍](#introduction)
+2. ⚙️ [技术栈](#tech-stack)
+3. 🔋 [功能](#features)
+4. 🤸 [启动](#quick-start)
+5. 🕸️ [个别代表片段](#snippets)
+6. 🔗 [静态资源](#links)
+7. 🚀 [更多](#more)
 
-## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
+## <a name="introduction">🤖 介绍</a>
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/PuOVqP_cjkE?feature=shared" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
-## <a name="introduction">🤖 Introduction</a>
-
-Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users, and manages their finances altogether. 
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **34k+** members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
-
-## <a name="tech-stack">⚙️ Tech Stack</a>
+银行转账后台是一个由Nextjs构建的金融SaaS平台，可以连接多个银行账户，实时显示交易，允许用户向其他平台用户转账，并管理他们的财务
+## <a name="tech-stack">⚙️ 技术栈</a>
 
 - Next.js
 - TypeScript
@@ -58,56 +38,56 @@ If you're getting started and need assistance or face any bugs, join our active 
 - Chart.js
 - ShadCN
 
-## <a name="features">🔋 Features</a>
+## <a name="features">🔋 功能</a>
 
-👉 **Authentication**: An ultra-secure SSR authentication with proper validations and authorization
+👉 **身份验证**：具备适当验证和授权的超安全SSR身份验证
 
-👉 **Connect Banks**: Integrates with Plaid for multiple bank account linking
+👉 **连接银行**：通过Plaid集成多个银行账户链接
 
-👉 **Home Page**: Shows general overview of user account with total balance from all connected banks, recent transactions, money spent on different categories, etc
+👉 **首页**：显示用户账户的总体概览，包括所有已连接银行的总余额、最近交易记录、不同类别的支出等
 
-👉 **My Banks**: Check the complete list of all connected banks with respective balances, account details
+👉 **我的银行**：查看所有已连接银行的完整列表及其各自的余额、账户详情
 
-👉 **Transaction History**: Includes pagination and filtering options for viewing transaction history of different banks
+👉 **交易历史**：包含分页和过滤选项，以便查看不同银行的交易历史
 
-👉 **Real-time Updates**: Reflects changes across all relevant pages upon connecting new bank accounts.
+👉 **实时更新**：在连接新的银行账户后，相关页面会反映变化
 
-👉 **Funds Transfer**: Allows users to transfer funds using Dwolla to other accounts with required fields and recipient bank ID.
+👉 **资金转账**：允许用户使用Dwolla向其他账户转账，并提供必要的字段和收款银行ID
 
-👉 **Responsiveness**: Ensures the application adapts seamlessly to various screen sizes and devices, providing a consistent user experience across desktop, tablet, and mobile platforms.
+👉 **响应式设计**：确保应用程序能够无缝适应各种屏幕尺寸和设备，为桌面、平板电脑和移动平台提供一致的用户体验
 
-and many more, including code architecture and reusability. 
+以及更多内容，包括代码架构和可重用性。
 
-## <a name="quick-start">🤸 Quick Start</a>
+## <a name="quick-start">🤸 启动</a>
 
-Follow these steps to set up the project locally on your machine.
+按照以下步骤完成项目本地搭建
 
-**Prerequisites**
+**先决条件**
 
-Make sure you have the following installed on your machine:
+确保计算机安装了以下软件：
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+- [npm](https://www.npmjs.com/) (节点包管理器)
 
-**Cloning the Repository**
+**克隆仓库**
 
 ```bash
 git clone https://github.com/adrianhajdin/banking.git
 cd banking
 ```
 
-**Installation**
+**安装**
 
-Install the project dependencies using npm:
+使用npm完成项目包的安装：
 
 ```bash
 npm install
 ```
 
-**Set Up Environment Variables**
+**设置环境变量**
 
-Create a new file named `.env` in the root of your project and add the following content:
+在根目录下创建 `.env` 并添加以下内容:
 
 ```env
 #NEXT
@@ -136,18 +116,17 @@ DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
 DWOLLA_ENV=sandbox
 
 ```
+可以在这些平台注册获得秘钥 [Appwrite](https://appwrite.io/?utm_source=youtube&utm_content=reactnative&ref=JSmastery), [Plaid](https://plaid.com/) and [Dwolla](https://www.dwolla.com/)
 
-Replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on the [Appwrite](https://appwrite.io/?utm_source=youtube&utm_content=reactnative&ref=JSmastery), [Plaid](https://plaid.com/) and [Dwolla](https://www.dwolla.com/)
-
-**Running the Project**
+**启动项目**
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+打开[http://localhost:3000](http://localhost:3000) 就可以看到本地项目预览
 
-## <a name="snippets">🕸️ Snippets</a>
+## <a name="snippets">🕸️ 个别片段代码展示</a>
 
 <details>
 <summary><code>.env.example</code></summary>
@@ -946,7 +925,7 @@ export const createTransfer = async () => {
 <details>
 <summary><code>BankTabItem.tsx</code></summary>
 
-```typescript
+```typescript jsx
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
@@ -991,7 +970,7 @@ export const BankTabItem = ({ account, appwriteItemId }: BankTabItemProps) => {
 <details>
 <summary><code>BankInfo.tsx</code></summary>
 
-```typescript
+```typescript jsx
 "use client";
 
 import Image from "next/image";
@@ -1073,7 +1052,7 @@ export default BankInfo;
 <details>
 <summary><code>Copy.tsx</code></summary>
 
-```typescript
+```typescript jsx
 "use client";
 import { useState } from "react";
 
@@ -1146,7 +1125,7 @@ export default Copy;
 <details>
 <summary><code>PaymentTransferForm.tsx</code></summary>
 
-```typescript
+```typescript jsx
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -1409,7 +1388,7 @@ export default PaymentTransferForm;
 <details>
 <summary><code>Missing from the video (top right on the transaction list page) BankDropdown.tsx</code></summary>
 
-```typescript
+```typescript jsx
 "use client";
 
 import Image from "next/image";
@@ -1501,7 +1480,7 @@ export const BankDropdown = ({
 <details>
 <summary><code>Pagination.tsx</code></summary>
 
-```typescript
+```typescript jsx
 "use client";
 
 import Image from "next/image";
@@ -1573,7 +1552,7 @@ export const Pagination = ({ page, totalPages }: PaginationProps) => {
 <details>
 <summary><code>Category.tsx</code></summary>
 
-```typescript
+```typescript jsx
 import Image from "next/image";
 
 import { topCategoryStyles } from "@/constants";
@@ -1614,16 +1593,12 @@ export const Category = ({ category }: CategoryProps) => {
 
 </details>
 
-## <a name="links">🔗 Links</a>
+## <a name="links">🔗 静态资源</a>
 
-Assets used in the project can be found [here](https://drive.google.com/file/d/1TVhdnD97LajGsyaiNa6sDs-ap-z1oerA/view?usp=sharing)
+静态资源在这里-> [here](https://drive.google.com/file/d/1TVhdnD97LajGsyaiNa6sDs-ap-z1oerA/view?usp=sharing)
 
-## <a name="more">🚀 More</a>
+## <a name="more">🚀 更多</a>
 
-**Advance your skills with Next.js Pro Course**
+**提高next-js应用能力**
 
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning experience. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
-<img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
-</a>
+今天又提升了！！
