@@ -1,12 +1,10 @@
-import Link from "next/link";
+import AuthForm from "@/components/Form/AuthForm";
 
 
 const SignIn =  () => {
     return (
         <section className="flex-center size-full max-sm:px-6">
-            <Link href="/not-found">
-                登录
-            </Link>
+            <AuthForm type="sign-in" />
         </section>
     )
 }
