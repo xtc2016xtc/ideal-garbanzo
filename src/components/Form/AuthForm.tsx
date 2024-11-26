@@ -1,7 +1,42 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
+import {z} from "zod";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
+import React from "react";
+import {
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import {Button} from "@/components/ui/button";
 
 const AuthForm = ({type}:{type:string}) => {
+
+    const formSchema = z.object({
+        email:z.string().email(),
+        password:z.string().min(8)
+    })
+
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            email: "",
+            password: ''
+        },
+    })
+
+    const onSubmit = async (date:z.infer<typeof formSchema>) => {
+        console.log(date)
+    }
+
     return (
         <section className="auth-form">
            <header className="flex flex-col gap-5 md:gap-8">
@@ -40,23 +75,54 @@ const AuthForm = ({type}:{type:string}) => {
                 链接银行
             </div>
             <>
-                <form className="space-y-8">
-                    {type === 'sign-up' && (
-                        <div>
-                            账户密码
-                        </div>
-                    )}
-                </form>
-                <footer className="flex justify-center gap-1">
-                    <p className="text-14 font-normal text-gray-600">
-                        {type === 'sign-in'
-                            ? "没有账户?"
-                            : "已有账户?"}
-                    </p>
-                    <Link href={type === 'sign-in' ? '/sign-up' : '/sign-in'} className="form-link">
-                        {type === 'sign-in' ? '注册' : '登录'}
-                    </Link>
-                </footer>
+                <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                        {type === 'sign-in' && (
+                          <>
+                                <FormField
+                                    control={form.control}
+                                    name="email"
+                                    render={({field}) => (
+                                        <FormItem>
+                                            <FormLabel>账户邮件</FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="shadcn" {...field} />
+                                            </FormControl>
+                                            <FormMessage/>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name="password"
+                                    render={({field}) => (
+                                        <FormItem>
+                                            <FormLabel>密码</FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="shadcn" {...field} />
+                                            </FormControl>
+                                            <FormMessage/>
+                                        </FormItem>
+                                    )}
+                                />
+                            </>
+                        )}
+
+
+
+                        <Button type="submit" className="text-gray-900 bg-red-300">注册</Button>
+                    </form>
+                </Form>
+                    <footer className="flex justify-center gap-1">
+                        <p className="text-14 font-normal text-gray-600">
+                            {type === 'sign-in'
+                                ? "没有账户?"
+                                : "已有账户?"}
+                        </p>
+                        <Link href={type === 'sign-in' ? '/sign-up' : '/sign-in'} className="form-link">
+                            {type === 'sign-in' ? '注册' : '登录'}
+                        </Link>
+                    </footer>
             </>
         </section>
     )
