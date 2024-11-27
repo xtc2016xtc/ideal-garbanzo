@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="分布式传递">
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/CustomInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/CustomInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +133,8 @@
       <workItem from="1732146056242" duration="7278000" />
       <workItem from="1732235689751" duration="14729000" />
       <workItem from="1732493709488" duration="4948000" />
-      <workItem from="1732582655264" duration="8646000" />
+      <workItem from="1732582655283" duration="597000" />
+      <workItem from="1732665006979" duration="8790000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -364,31 +368,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732527573252</updated>
     </task>
-    <task id="LOCAL-00030" summary="调整">
-      <option name="closed" value="true" />
-      <created>1732591732031</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1732591732031</updated>
-    </task>
-    <task id="LOCAL-00031" summary="调整">
-      <option name="closed" value="true" />
-      <created>1732591752979</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1732591752979</updated>
-    </task>
-    <task id="LOCAL-00032" summary="分布式传递">
-      <option name="closed" value="true" />
-      <created>1732610441234</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1732610441234</updated>
-    </task>
-    <option name="localTasksCounter" value="33" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +401,6 @@
     <MESSAGE value="居中调整" />
     <MESSAGE value="布局调整" />
     <MESSAGE value="调整" />
-    <MESSAGE value="分布式传递" />
-    <option name="LAST_COMMIT_MESSAGE" value="分布式传递" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整" />
   </component>
 </project>

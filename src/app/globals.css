@@ -57,4 +57,57 @@
   .flex-center {
     @apply flex items-center justify-center;
   }
+  /*注册登录按钮*/
+  .form-btn {
+    @apply text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
+  }
+  /*字体*/
+  .text-10 {
+    @apply text-[10px] leading-[14px];
+  }
+  .text-12 {
+    @apply text-[12px] leading-[16px];
+  }
+  .text-14 {
+    @apply text-[14px] leading-[20px];
+  }
+  .text-16 {
+    @apply text-[16px] leading-[24px];
+  }
+  .text-18 {
+    @apply text-[18px] leading-[22px];
+  }
+  .text-20 {
+    @apply text-[20px] leading-[24px];
+  }
+  .text-24 {
+    @apply text-[24px] leading-[30px];
+  }
+  .text-26 {
+    @apply text-[26px] leading-[32px];
+  }
+  .text-30 {
+    @apply text-[30px] leading-[38px];
+  }
+  .text-36 {
+    @apply text-[36px] leading-[44px];
+  }
+
+  /*输入框*/
+  .input-class {
+    @apply text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
+  }
+  .form-item {
+    @apply flex flex-col gap-1.5;
+  }
+  .form-label {
+    @apply text-14 w-full max-w-[280px] font-medium text-gray-700;
+  }
+  .form-message {
+    @apply text-12 text-red-500;
+  }
+  /*链接银行*/
+  .form-link {
+    @apply text-14 cursor-pointer font-medium text-bankGradient;
+  }
 }
