@@ -4,6 +4,8 @@ import {Query} from "node-appwrite";
 import {cookies} from "next/headers";
 import {createAdminClient} from "@/lib/appwrite";
 import {parseStringify} from "@/lib/utils";
+import {CountryCode, Products} from "plaid";
+import {plaidClient} from "@/lib/plaid";
 
 
 const {APPWRITE_DATABASE_ID: DATABASE_ID, APPWRITE_USER_COLLECTION_ID: USER_COLLECTION_ID,
@@ -43,6 +45,27 @@ export const signIn = async ({ email, password }: signInProps) => {
         return parseStringify(user);
     } catch (error) {
         console.error('Error', error);
+    }
+}
+
+/*链接银行*/
+export const createLinkToken = async (user: User) => {
+    try {
+        const tokenParams = {
+            user: {
+                client_user_id: user.$id
+            },
+            client_name: `${user.firstName} ${user.lastName}`,
+            products: ['auth'] as Products[],
+            language: 'en',
+            country_codes: ['US'] as CountryCode[],
+        }
+
+        const response = await plaidClient.linkTokenCreate(tokenParams);
+
+        return parseStringify({ linkToken: response.data.link_token })
+    } catch (error) {
+        console.log(error);
     }
 }
 

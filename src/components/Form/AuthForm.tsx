@@ -20,6 +20,9 @@ const AuthForm = ({type}:{type:string}) => {
     /*路由*/
     const router = useRouter();
 
+    /*链接银行*/
+    const [user, setUser] = useState()
+
     /*注册加载*/
     const [isLoading, setIsLoading] = useState(false);
 
@@ -44,6 +47,8 @@ const AuthForm = ({type}:{type:string}) => {
     const onSubmit = async (data: z.infer<typeof formSchema>) => {
         console.log(data);
         setIsLoading(true);
+
+
         if(type === 'sign-in'){
             const response = await signIn({
                 email: data.email,
@@ -90,7 +95,7 @@ const AuthForm = ({type}:{type:string}) => {
            </header>
             {/*连接银行*/}
             <div className="flex flex-col gap-4">
-                <PlaidLink  />
+                <PlaidLink user={user} variant="primary" />
             </div>
             <>
                 <Form {...form}>
