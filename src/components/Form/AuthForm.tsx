@@ -21,7 +21,7 @@ const AuthForm = ({type}:{type:string}) => {
     const router = useRouter();
 
     /*链接银行*/
-    const [user, setUser] = useState()
+    const [user, setUser] = useState(null)
 
     /*注册加载*/
     const [isLoading, setIsLoading] = useState(false);
@@ -93,68 +93,70 @@ const AuthForm = ({type}:{type:string}) => {
                  </h1>
                </div>
            </header>
-            {/*连接银行*/}
-            <div className="flex flex-col gap-4">
-                <PlaidLink user={user} variant="primary" />
-            </div>
-            <>
-                <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                        {type === 'sign-up' && (
-                            <>
-                                <div className="flex gap-4">
-                                    <CustomInput control={form.control} name="firstName" label="姓名"
-                                                 placeholder="姓名"/>
-                                    <CustomInput control={form.control} name='lastName' label="职称"
-                                                 placeholder='职称'/>
-                                </div>
-                                <CustomInput control={form.control} name='address1' label="地址"
-                                             placeholder='确认地址'/>
-                                <CustomInput control={form.control} name='city' label="城市" placeholder='城市'/>
-                                <div className="flex gap-4">
-                                    <CustomInput control={form.control} name='state' label="城市缩写"
-                                                 placeholder='城市缩写：NY'/>
-                                    <CustomInput control={form.control} name='postalCode' label="邮政编码"
-                                                 placeholder='邮政编码：12345'/>
-                                </div>
-                                <div className="flex gap-4">
-                                    <CustomInput control={form.control} name='dateOfBirth' label="出生日期"
-                                                 placeholder='YYYY-MM-DD'/>
-                                    <CustomInput control={form.control} name='ssn' label="注册许可安全验证码"
-                                                 placeholder='Example: 1234'/>
-                                </div>
-                            </>
-                        )}
+            {user ? (
+                <div className="flex flex-col gap-4">
+                    <PlaidLink user={user} variant="primary" />
+                </div>
+            ):(
+                <>
+                    <Form {...form}>
+                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                            {type === 'sign-up' && (
+                                <>
+                                    <div className="flex gap-4">
+                                        <CustomInput control={form.control} name="firstName" label="姓名"
+                                                     placeholder="姓名"/>
+                                        <CustomInput control={form.control} name='lastName' label="职称"
+                                                     placeholder='职称'/>
+                                    </div>
+                                    <CustomInput control={form.control} name='address1' label="地址"
+                                                 placeholder='确认地址'/>
+                                    <CustomInput control={form.control} name='city' label="城市" placeholder='城市'/>
+                                    <div className="flex gap-4">
+                                        <CustomInput control={form.control} name='state' label="城市缩写"
+                                                     placeholder='城市缩写：NY'/>
+                                        <CustomInput control={form.control} name='postalCode' label="邮政编码"
+                                                     placeholder='邮政编码：12345'/>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <CustomInput control={form.control} name='dateOfBirth' label="出生日期"
+                                                     placeholder='YYYY-MM-DD'/>
+                                        <CustomInput control={form.control} name='ssn' label="注册许可安全验证码"
+                                                     placeholder='Example: 1234'/>
+                                    </div>
+                                </>
+                            )}
 
-                        <CustomInput control={form.control} name='email' label="账户"
-                                     placeholder='确认你的账号@example.com'/>
+                            <CustomInput control={form.control} name='email' label="账户"
+                                         placeholder='确认你的账号@example.com'/>
 
-                        <CustomInput control={form.control} name='password' label="密码" placeholder='确认密码'/>
+                            <CustomInput control={form.control} name='password' label="密码" placeholder='确认密码'/>
 
-                        <div className="flex flex-col gap-4">
-                            <Button type="submit" disabled={isLoading} className="form-btn">
-                                {isLoading ? (
-                                    <>
-                                        <Loader2 size={20} className="animate-spin" /> &nbsp;
-                                        加载中...请稍后...
-                                    </>
-                                ):type === "sign-in"
-                                    ? '登录':'注册'}
-                            </Button>
-                        </div>
-                    </form>
-                </Form>
-                <footer className="flex justify-center gap-1">
-                    <p className="text-14 font-normal text-gray-600">
-                        {type === 'sign-in'
-                            ? "没有账户?"
-                            : "已有账户?"}
-                    </p>
+                            <div className="flex flex-col gap-4">
+                                <Button type="submit" disabled={isLoading} className="form-btn">
+                                    {isLoading ? (
+                                        <>
+                                            <Loader2 size={20} className="animate-spin" /> &nbsp;
+                                            加载中...请稍后...
+                                        </>
+                                    ):type === "sign-in"
+                                        ? '登录':'注册'}
+                                </Button>
+                            </div>
+                        </form>
+                    </Form>
+                    <footer className="flex justify-center gap-1">
+                        <p className="text-14 font-normal text-gray-600">
+                            {type === 'sign-in'
+                                ? "没有账户?"
+                                : "已有账户?"}
+                        </p>
                         <Link href={type === 'sign-in' ? '/sign-up' : '/sign-in'} className="form-link">
                             {type === 'sign-in' ? '注册' : '登录'}
                         </Link>
                     </footer>
-            </>
+                </>
+            )}
         </section>
     )
 }

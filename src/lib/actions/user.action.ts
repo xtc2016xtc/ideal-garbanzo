@@ -48,6 +48,19 @@ export const signIn = async ({ email, password }: signInProps) => {
     }
 }
 
+/*注册*/
+export const signUp = async ({ password, ...userData }: SignUpParams) => {
+    const { email, firstName, lastName } = userData;
+
+    let newUserAccount;
+
+    try {
+
+    }catch (error) {
+        console.error('注册遇到错误', error);
+    }
+}
+
 /*链接银行*/
 export const createLinkToken = async (user: User) => {
     try {
