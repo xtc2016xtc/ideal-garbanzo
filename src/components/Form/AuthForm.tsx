@@ -12,6 +12,8 @@ import CustomInput from "@/components/input/CustomInput";
 import {authFormSchema} from "@/lib/utils";
 import {Loader2} from "lucide-react";
 import {useRouter} from "next/navigation";
+import PlaidLink from "@/components/link/PlaidLink";
+import {signIn} from "@/lib/actions/user.action";
 
 const AuthForm = ({type}:{type:string}) => {
 
@@ -42,9 +44,17 @@ const AuthForm = ({type}:{type:string}) => {
     const onSubmit = async (data: z.infer<typeof formSchema>) => {
         console.log(data);
         setIsLoading(true);
-        router.push('/')
+        if(type === 'sign-in'){
+            const response = await signIn({
+                email: data.email,
+                password: data.password,
+            })
+
+            if(response) router.push('/')
+        }
     };
 
+    
     return (
         <section className="auth-form">
            <header className="flex flex-col gap-5 md:gap-8">
@@ -80,7 +90,7 @@ const AuthForm = ({type}:{type:string}) => {
            </header>
             {/*连接银行*/}
             <div className="flex flex-col gap-4">
-                链接银行
+                <PlaidLink  />
             </div>
             <>
                 <Form {...form}>
