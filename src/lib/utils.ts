@@ -30,3 +30,15 @@ export const authFormSchema = (type:string) => z.object({
   email: z.string().email(),
   password: z.string().min(8),
 })
+
+export function extractCustomerIdFromUrl(url: string) {
+  //  用 '/' 拆分字符串
+  const parts = url.split("/");
+
+  // 提取最后一部分当做 ID
+  return parts[parts.length - 1];
+}
+
+export function encryptId(id: string) {
+  return btoa(id);
+}

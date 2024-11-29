@@ -13,7 +13,7 @@ import {authFormSchema} from "@/lib/utils";
 import {Loader2} from "lucide-react";
 import {useRouter} from "next/navigation";
 import PlaidLink from "@/components/link/PlaidLink";
-import {signIn} from "@/lib/actions/user.action";
+import {signIn, signUp} from "@/lib/actions/user.action";
 
 const AuthForm = ({type}:{type:string}) => {
 
@@ -21,10 +21,13 @@ const AuthForm = ({type}:{type:string}) => {
     const router = useRouter();
 
     /*链接银行*/
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState<User | null>(null);
 
     /*注册加载*/
     const [isLoading, setIsLoading] = useState(false);
+
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
 
     const formSchema = authFormSchema(type);
 
@@ -48,14 +51,72 @@ const AuthForm = ({type}:{type:string}) => {
         console.log(data);
         setIsLoading(true);
 
+        try {
+            if(type === 'sign-up') {
+                const userData = {
+                    firstName: data.firstName!,
+                    lastName: data.lastName!,
+                    address1: data.address1!,
+                    city: data.city!,
+                    state: data.state!,
+                    postalCode: data.postalCode!,
+                    dateOfBirth: data.dateOfBirth!,
+                    ssn: data.ssn!,
+                    email: data.email,
+                    password: data.password
+                }
 
-        if(type === 'sign-in'){
-            const response = await signIn({
-                email: data.email,
-                password: data.password,
-            })
+                const newUser = await signUp(userData);
 
-            if(response) router.push('/')
+                // 确保 newUser 存在且类型正确
+                if (newUser) {
+                    // 先将 Document 转换为 unknown，再转换为 User
+                    setUser(newUser as unknown as User);
+                    console.log(newUser);
+                } else {
+                    console.error('用户创建失败');
+                }
+            }
+
+            if(type === 'sign-in'){
+                const response = await signIn({
+                    email: data.email,
+                    password: data.password,
+                })
+
+                // if(response) router.push('/')
+                if(response){
+                    if (response.success) {
+                        router.push('/');
+                    } else {
+                        if (response.error === 'invalid_credentials') {
+                            setAlertMessage('密码错误');
+                            setShowAlert(true);
+                            setTimeout(() => {
+                                setShowAlert(false);
+                                router.push('/register');
+                            }, 3000);
+                        } else if (response.error === 'user_not_found') {
+                            setAlertMessage('账号不存在');
+                            setShowAlert(true);
+                            setTimeout(() => {
+                                setShowAlert(false);
+                                router.push('/register');
+                            }, 3000);
+                        } else {
+                            setAlertMessage('未知错误');
+                            setShowAlert(true);
+                        }
+                    }
+                }else {
+                    setAlertMessage('登录失败');
+                    setShowAlert(true);
+                }
+            }
+        }catch (error) {
+            console.log(error);
+        }finally {
+            setIsLoading(false);
         }
     };
 
@@ -74,30 +135,27 @@ const AuthForm = ({type}:{type:string}) => {
                </Link>
 
                <div className="flex flex-col gap-1 md:gap-3">
-                 <h1 className="text-26 lg:text-36 font-semibold text-gray-900">
-                     {/*{type == 'sign-up' && (*/}
-                     {/*    <div>*/}
-                     {/*        注册*/}
-                     {/*        <p>链接你的账户</p>*/}
-                     {/*    </div>*/}
-                     {/*   )*/}
-                     {/*}*/}
-                     <p className="text-16 font-normal text-gray-600">
-                         {/*{type == 'sign-in' && (*/}
-                         {/*    <div>*/}
-                         {/*       登录*/}
-                         {/*    </div>*/}
-                         {/*)*/}
-                         {/*}*/}
-                     </p>
-                 </h1>
+                   <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
+                       {user
+                           ? '链接中'
+                           : type === 'sign-in'
+                               ? '登录'
+                               : '注册'
+                       }
+                       <p className="text-16 font-normal text-gray-600">
+                           {user
+                               ? '链接你的账户'
+                               : '输入账户密码'
+                           }
+                       </p>
+                   </h1>
                </div>
            </header>
             {user ? (
                 <div className="flex flex-col gap-4">
-                    <PlaidLink user={user} variant="primary" />
+                    <PlaidLink user={user} variant="primary"/>
                 </div>
-            ):(
+            ) : (
                 <>
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -129,8 +187,15 @@ const AuthForm = ({type}:{type:string}) => {
 
                             <CustomInput control={form.control} name='email' label="账户"
                                          placeholder='确认你的账号@example.com'/>
+                            {showAlert && (
+                                <div>
+                                    {alertMessage}
+                                </div>
+                            )}
 
                             <CustomInput control={form.control} name='password' label="密码" placeholder='确认密码'/>
+
+
 
                             <div className="flex flex-col gap-4">
                                 <Button type="submit" disabled={isLoading} className="form-btn">
