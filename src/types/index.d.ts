@@ -17,6 +17,9 @@ declare type User = {
     ssn: string;
 };
 
+declare interface SiderbarProps {
+    user: User;
+}
 /*链接银行*/
 declare interface PlaidLinkProps {
     user: User;

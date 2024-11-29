@@ -2,7 +2,7 @@
 
 import {ID, Query} from "node-appwrite";
 import {cookies} from "next/headers";
-import {createAdminClient} from "@/lib/appwrite";
+import {createAdminClient, createSessionClient} from "@/lib/appwrite";
 import {encryptId, extractCustomerIdFromUrl, parseStringify} from "@/lib/utils";
 import {CountryCode, ProcessorTokenCreateRequest, ProcessorTokenCreateRequestProcessorEnum, Products} from "plaid";
 import {plaidClient} from "@/lib/plaid";
@@ -204,6 +204,21 @@ export const exchangePublicToken = async ({publicToken, user,}: exchangePublicTo
         });
     } catch (error) {
         console.error("An error occurred while creating exchanging token:", error);
+    }
+}
+
+/*验证登录*/
+export async function getLoggedInUser() {
+    try {
+        const { account } = await createSessionClient();
+        const result = await account.get();
+
+        const user = await getUserInfo({ userId: result.$id})
+
+        return parseStringify(user);
+    } catch (error) {
+        console.log(error)
+        return null;
     }
 }
 

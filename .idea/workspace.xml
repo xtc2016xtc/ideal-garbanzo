@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="更新">
-      <change afterPath="$PROJECT_DIR$/src/lib/actions/dwolla.actions.ts" afterDir="false" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="已成功链接银行,并完成沙盒转账">
+      <change afterPath="$PROJECT_DIR$/src/components/Bar/Sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/link/PlaidLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link/PlaidLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/actions/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/user.action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -38,7 +40,7 @@
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -85,11 +87,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app\(root)" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app\（root）" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\utils" />
-      <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -143,7 +145,7 @@
       <workItem from="1732582655283" duration="597000" />
       <workItem from="1732665006979" duration="15444000" />
       <workItem from="1732753743079" duration="15877000" />
-      <workItem from="1732841860195" duration="8340000" />
+      <workItem from="1732841860195" duration="15962000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -425,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732787467226</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="已成功链接银行,并完成沙盒转账">
+      <option name="closed" value="true" />
+      <created>1732852903784</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1732852903784</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,6 +470,7 @@
     <MESSAGE value="调整" />
     <MESSAGE value="A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info:解决未授控问题" />
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="已成功链接银行,并完成沙盒转账" />
+    <option name="LAST_COMMIT_MESSAGE" value="已成功链接银行,并完成沙盒转账" />
   </component>
 </project>
