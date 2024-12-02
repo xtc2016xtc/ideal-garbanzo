@@ -26,9 +26,6 @@ const AuthForm = ({type}:{type:string}) => {
     /*注册加载*/
     const [isLoading, setIsLoading] = useState(false);
 
-    const [showAlert, setShowAlert] = useState(false);
-    const [alertMessage, setAlertMessage] = useState('');
-
     const formSchema = authFormSchema(type);
 
     const form = useForm<z.infer<typeof formSchema>>({
@@ -48,9 +45,7 @@ const AuthForm = ({type}:{type:string}) => {
     })
 
     const onSubmit = async (data: z.infer<typeof formSchema>) => {
-        console.log(data);
         setIsLoading(true);
-
         try {
             if(type === 'sign-up') {
                 const userData = {
@@ -83,35 +78,7 @@ const AuthForm = ({type}:{type:string}) => {
                     email: data.email,
                     password: data.password,
                 })
-
-                // if(response) router.push('/')
-                if(response){
-                    if (response.success) {
-                        router.push('/');
-                    } else {
-                        if (response.error === 'invalid_credentials') {
-                            setAlertMessage('密码错误');
-                            setShowAlert(true);
-                            setTimeout(() => {
-                                setShowAlert(false);
-                                router.push('/register');
-                            }, 3000);
-                        } else if (response.error === 'user_not_found') {
-                            setAlertMessage('账号不存在');
-                            setShowAlert(true);
-                            setTimeout(() => {
-                                setShowAlert(false);
-                                router.push('/register');
-                            }, 3000);
-                        } else {
-                            setAlertMessage('未知错误');
-                            setShowAlert(true);
-                        }
-                    }
-                }else {
-                    setAlertMessage('登录失败');
-                    setShowAlert(true);
-                }
+                if(response) router.push('/')
             }
         }catch (error) {
             console.log(error);
@@ -187,15 +154,7 @@ const AuthForm = ({type}:{type:string}) => {
 
                             <CustomInput control={form.control} name='email' label="账户"
                                          placeholder='确认你的账号@example.com'/>
-                            {showAlert && (
-                                <div>
-                                    {alertMessage}
-                                </div>
-                            )}
-
                             <CustomInput control={form.control} name='password' label="密码" placeholder='确认密码'/>
-
-
 
                             <div className="flex flex-col gap-4">
                                 <Button type="submit" disabled={isLoading} className="form-btn">

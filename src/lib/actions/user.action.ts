@@ -50,6 +50,7 @@ export const signIn = async ({ email, password }: signInProps) => {
     }
 }
 
+
 /*注册*/
 export const signUp = async ({ password, ...userData }: SignUpParams) => {
     const { email, firstName, lastName } = userData;
