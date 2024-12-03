@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="验证出现bug">
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="bug修正">
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/MobileNav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +140,8 @@
       <workItem from="1732665006979" duration="15444000" />
       <workItem from="1732753743079" duration="15877000" />
       <workItem from="1732841860195" duration="17492000" />
-      <workItem from="1733098792062" duration="11275000" />
+      <workItem from="1733098792062" duration="11367000" />
+      <workItem from="1733184405921" duration="1792000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -442,7 +447,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733109654447</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="bug修正">
+      <option name="closed" value="true" />
+      <created>1733132750415</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733132750415</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,6 +493,7 @@
     <MESSAGE value="已成功链接银行,并完成沙盒转账" />
     <MESSAGE value="已完成登录验证" />
     <MESSAGE value="验证出现bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="验证出现bug" />
+    <MESSAGE value="bug修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug修正" />
   </component>
 </project>

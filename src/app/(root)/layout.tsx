@@ -3,6 +3,7 @@ import {getLoggedInUser} from "@/lib/actions/user.action";
 import {redirect} from "next/navigation";
 import Sidebar from "@/components/Bar/Sidebar";
 import Image from "next/image";
+import MobileNav from "@/components/mobile/MobileNav";
 
 
 export default async function RootLayout({
@@ -27,7 +28,7 @@ export default async function RootLayout({
                     <div className="root-layout">
                             <Image src="/icons/logo.svg" width={30} height={30} alt="logo"/>
                         <div>
-                            缩放导航栏
+                            <MobileNav />
                         </div>
                     </div>
                     {children}
