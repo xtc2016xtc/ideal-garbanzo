@@ -33,6 +33,9 @@ declare interface signInProps {
     password: string;
 }
 
+declare interface MobileNavProps {
+    user: User;
+}
 /*注册*/
 declare type SignUpParams = {
     firstName: string;
