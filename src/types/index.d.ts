@@ -26,7 +26,10 @@ declare interface PlaidLinkProps {
     variant?: "primary" | "ghost";
     dwollaCustomerId?: string;
 }
-
+declare interface FooterProps {
+    user: User;
+    type?: 'mobile' | 'desktop'
+}
 /*登录*/
 declare interface signInProps {
     email: string;

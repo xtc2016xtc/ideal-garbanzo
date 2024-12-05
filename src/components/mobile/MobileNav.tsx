@@ -8,6 +8,7 @@ import {sidebarLinks} from "@/constants";
 import {cn} from "@/lib/utils";
 import { usePathname } from "next/navigation"
 import PlaidLink from "@/components/link/PlaidLink";
+import Footer from "@/components/footer/Footer";
 
 const MobileNav = ({user}:MobileNavProps) => {
     const pathname = usePathname();
@@ -25,7 +26,7 @@ const MobileNav = ({user}:MobileNavProps) => {
                     />
                 </SheetTrigger>
 
-                <SheetContent side="left" className="border-none bg-white">
+                <SheetContent side="left" className="border-none bg-white max-w-[355px]">
                     <SheetTitle>
                         <Link href="/" className="cursor-pointer flex items-center gap-1 px-4">
                             <Image
@@ -37,7 +38,7 @@ const MobileNav = ({user}:MobileNavProps) => {
                             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">银行收款</h1>
                         </Link>
                     </SheetTitle>
-                    <div className="mobilennav-sheet">
+                    <div className="mobilenav-sheet">
                         <SheetClose asChild>
                             <nav className="flex h-full flex-col gap-6 pt-16 text-white">
                                 {sidebarLinks.map((item) => {
@@ -69,8 +70,7 @@ const MobileNav = ({user}:MobileNavProps) => {
                             </nav>
                         </SheetClose>
 
-
-
+                        <Footer user={user} type="mobile"/>
                     </div>
                 </SheetContent>
             </Sheet>
