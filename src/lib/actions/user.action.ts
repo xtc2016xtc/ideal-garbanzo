@@ -236,6 +236,23 @@ export const logoutAccount = async () => {
     }
 }
 
+/*总账户*/
+export const getBanks = async ({ userId }: getBanksProps) => {
+    try {
+        const { database } = await createAdminClient();
+
+        const banks = await database.listDocuments(
+            DATABASE_ID!,
+            BANK_COLLECTION_ID!,
+            [Query.equal('userId', [userId])]
+        )
+
+        return parseStringify(banks.documents);
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 
 
 

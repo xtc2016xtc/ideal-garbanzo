@@ -1,4 +1,9 @@
+/* eslint-disable no-unused-vars */
 
+declare type SearchParamProps = {
+    params: { [key: string]: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+};
 
 declare type User = {
     $id: string;
@@ -17,6 +22,16 @@ declare type User = {
     ssn: string;
 };
 
+declare type Bank = {
+    $id: string;
+    accountId: string;
+    bankId: string;
+    accessToken: string;
+    fundingSourceUrl: string;
+    userId: string;
+    shareableId: string;
+};
+
 declare interface SiderbarProps {
     user: User;
 }
@@ -25,6 +40,31 @@ declare interface PlaidLinkProps {
     user: User;
     variant?: "primary" | "ghost";
     dwollaCustomerId?: string;
+}
+
+declare type Account = {
+    id: string;
+    availableBalance: number;
+    currentBalance: number;
+    officialName: string;
+    mask: string;
+    institutionId: string;
+    name: string;
+    type: string;
+    subtype: string;
+    appwriteItemId: string;
+    shareableId: string;
+};
+
+declare interface TotalBalanceBoxProps {
+    accounts: Account[];
+    totalBanks: number;
+    totalCurrentBalance: number;
+}
+
+/*图表*/
+declare interface DoughnutChartProps {
+    accounts: Account[];
 }
 
 declare interface HeaderBoxProps {
@@ -43,7 +83,9 @@ declare interface signInProps {
     email: string;
     password: string;
 }
-
+declare interface getAccountsProps {
+    userId: string;
+}
 declare interface MobileNavProps {
     user: User;
 }
@@ -104,4 +146,29 @@ declare interface createBankAccountProps {
     bankId: string;
     fundingSourceUrl: string;
     shareableId: string;
+}
+declare interface getBanksProps {
+    userId: string;
+}
+declare interface getInstitutionProps {
+    institutionId: string;
+}
+interface AccountsResponse {
+    data: {
+        accounts: Array<{
+            account_id: string;
+            balances: {
+                available: number | null;
+                current: number;
+            };
+            name: string;
+            official_name: string | null;
+            mask: string;
+            type: string;
+            subtype: string;
+        }>;
+        item: {
+            institution_id: string;
+        };
+    };
 }

@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="基础搭建完成">
-      <change afterPath="$PROJECT_DIR$/src/components/header/HeaderBox.tsx" afterDir="false" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="头部">
+      <change afterPath="$PROJECT_DIR$/src/components/Box/TotalBalanceBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Chart/DoughnutChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/actions/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/user.action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -144,7 +149,8 @@
       <workItem from="1733184405921" duration="4212000" />
       <workItem from="1733271392075" duration="4643000" />
       <workItem from="1733357043665" duration="9868000" />
-      <workItem from="1733443724803" duration="695000" />
+      <workItem from="1733443724803" duration="5931000" />
+      <workItem from="1733706558707" duration="4760000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -498,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733383467073</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="头部">
+      <option name="closed" value="true" />
+      <created>1733456768562</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1733456768562</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="初始化" />
     <MESSAGE value="修改" />
     <MESSAGE value="添加配置" />
     <MESSAGE value="表单" />
@@ -541,6 +554,7 @@
     <MESSAGE value="缩放比例" />
     <MESSAGE value="等比例缩放" />
     <MESSAGE value="基础搭建完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="基础搭建完成" />
+    <MESSAGE value="头部" />
+    <option name="LAST_COMMIT_MESSAGE" value="头部" />
   </component>
 </project>
