@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="头部">
-      <change afterPath="$PROJECT_DIR$/src/components/Box/TotalBalanceBox.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chart/DoughnutChart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" afterDir="false" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="Error: Route &quot;/&quot; used `searchParams.page`. `searchParams` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis&#10;修改bug">
+      <change afterPath="$PROJECT_DIR$/src/components/Animated/AnimatedCounter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Transaction/RecentTransactions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/actions/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/user.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Box/TotalBalanceBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Box/TotalBalanceBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -39,7 +40,7 @@
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -150,7 +151,8 @@
       <workItem from="1733271392075" duration="4643000" />
       <workItem from="1733357043665" duration="9868000" />
       <workItem from="1733443724803" duration="5931000" />
-      <workItem from="1733706558707" duration="4760000" />
+      <workItem from="1733706558707" duration="12223000" />
+      <workItem from="1733789166194" duration="4468000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -512,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733456768562</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="账户显示">
+      <option name="closed" value="true" />
+      <created>1733720183598</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1733720183598</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,8 +540,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改" />
-    <MESSAGE value="添加配置" />
     <MESSAGE value="表单" />
     <MESSAGE value="编写文档" />
     <MESSAGE value="修改缺少的一部分文档（部分内容）" />
@@ -555,6 +563,8 @@
     <MESSAGE value="等比例缩放" />
     <MESSAGE value="基础搭建完成" />
     <MESSAGE value="头部" />
-    <option name="LAST_COMMIT_MESSAGE" value="头部" />
+    <MESSAGE value="账户显示" />
+    <MESSAGE value="Error: Route &quot;/&quot; used `searchParams.page`. `searchParams` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis&#10;修改bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error: Route &quot;/&quot; used `searchParams.page`. `searchParams` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis&#10;修改bug" />
   </component>
 </project>

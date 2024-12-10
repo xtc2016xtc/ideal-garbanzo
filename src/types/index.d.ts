@@ -67,6 +67,32 @@ declare interface DoughnutChartProps {
     accounts: Account[];
 }
 
+declare type Transaction = {
+    id: string;
+    $id: string;
+    name: string;
+    paymentChannel: string;
+    accountId: string;
+    amount: number;
+    pending: boolean;
+    category: string;
+    date: string;
+    image: string;
+    type: string;
+    $createdAt: string;
+    channel: string;
+    senderBankId: string;
+    receiverBankId: string;
+};
+
+declare interface RecentTransactionsProps {
+    accounts: Account[];
+    transactions: Transaction[];
+    appwriteItemId: string;
+    page: number;
+}
+
+
 declare interface HeaderBoxProps {
     type?: "title" | "greeting";
     title: string;
@@ -102,6 +128,7 @@ declare type SignUpParams = {
     email: string;
     password: string;
 };
+
 
 declare type NewDwollaCustomerParams = {
     firstName: string;
@@ -153,22 +180,4 @@ declare interface getBanksProps {
 declare interface getInstitutionProps {
     institutionId: string;
 }
-interface AccountsResponse {
-    data: {
-        accounts: Array<{
-            account_id: string;
-            balances: {
-                available: number | null;
-                current: number;
-            };
-            name: string;
-            official_name: string | null;
-            mask: string;
-            type: string;
-            subtype: string;
-        }>;
-        item: {
-            institution_id: string;
-        };
-    };
-}
+
