@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="开源许可">
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="增加类型守卫">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Box/TotalBalanceBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Box/TotalBalanceBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -172,7 +171,8 @@
       <workItem from="1733443724803" duration="5931000" />
       <workItem from="1733706558707" duration="12223000" />
       <workItem from="1733789166194" duration="4468000" />
-      <workItem from="1733888361690" duration="2006000" />
+      <workItem from="1733888361690" duration="2173000" />
+      <workItem from="1733890547284" duration="3068000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -558,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733885334557</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="增加类型守卫">
+      <option name="closed" value="true" />
+      <created>1733890398464</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1733890398464</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改缺少的一部分文档（部分内容）" />
     <MESSAGE value="修改bug" />
     <MESSAGE value="整体重构项目" />
     <MESSAGE value="增加项目介绍" />
@@ -601,6 +608,7 @@
     <MESSAGE value="Error: Route &quot;/&quot; used `searchParams.page`. `searchParams` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis&#10;修改bug" />
     <MESSAGE value="tab标题" />
     <MESSAGE value="开源许可" />
-    <option name="LAST_COMMIT_MESSAGE" value="开源许可" />
+    <MESSAGE value="增加类型守卫" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加类型守卫" />
   </component>
 </project>
