@@ -22,8 +22,35 @@ function Timeauto(): string {
     }
 }
 
-const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
+/*类型守卫*/
+function isAccount(item: any): item is Account {
+    return (
+        typeof item === 'object' &&
+        item !== null &&
+        typeof item.id === 'string' &&
+        typeof item.availableBalance === 'number' &&
+        typeof item.currentBalance === 'number' &&
+        typeof item.officialName === 'string' &&
+        typeof item.mask === 'string' &&
+        typeof item.institutionId === 'string' &&
+        typeof item.name === 'string' &&
+        typeof item.type === 'string' &&
+        typeof item.subtype === 'string' &&
+        typeof item.appwriteItemId === 'string' &&
+        typeof item.shareableId === 'string'
+    );
+}
 
+function isAccountArray(value: unknown[]): value is Account[] {
+    return Array.isArray(value) && value.every(isAccount);
+}
+
+const Home = async ({ searchParams }: SearchParamProps) => {
+
+    const [resolvedSearchParams] = await Promise.all([Promise.resolve(searchParams)])
+
+    const id = resolvedSearchParams.id;
+    const page = resolvedSearchParams.page;
     const currentPage = Number(page as string) || 1;
     const loggedIn = await getLoggedInUser();
 
@@ -67,6 +94,14 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
 
     const accountsData = accounts?.data;
 
+    if(isAccountArray(accountsData)){
+        const accounts:Account[] = accountsData
+    }else {
+        console.log("类型错误")
+    }
+
+    console.log("feng");
+
 
     if (
         accountsData &&
@@ -77,11 +112,10 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
         "appwriteItemId" in accountsData[0]
     ) {
         const appwriteItemId = (id as string) || (accountsData[0] as any).appwriteItemId;
-        console.log(appwriteItemId);
+        console.log("获取成功",appwriteItemId)
     } else {
         console.error("appwriteItemId获取错误.");
     }
-
 
 
 
@@ -97,7 +131,7 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
                     />
                     {/*显示资金*/}
                     <TotalBalanceBox
-                        // @ts-ignore
+                        //@ts-ignore
                         accounts={accountsData}
                         totalBanks={accounts?.totalBanks}
                         // @ts-ignore
