@@ -70,7 +70,6 @@ declare interface getBankProps {
     documentId: string;
 }
 
-
 /*图表*/
 declare interface DoughnutChartProps {
     accounts: Account[];

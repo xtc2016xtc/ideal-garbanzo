@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="修改bug">
-      <change afterPath="$PROJECT_DIR$/src/app/(root)/transaction-history/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/actions/ceshi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="修改类型bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,15 +173,7 @@
       <workItem from="1733789166194" duration="4468000" />
       <workItem from="1733888361690" duration="2173000" />
       <workItem from="1733890547284" duration="4289000" />
-      <workItem from="1733965247004" duration="5366000" />
-    </task>
-    <task id="LOCAL-00002" summary="修改">
-      <option name="closed" value="true" />
-      <created>1730799137813</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1730799137813</updated>
+      <workItem from="1733965247004" duration="6069000" />
     </task>
     <task id="LOCAL-00003" summary="添加配置">
       <option name="closed" value="true" />
@@ -572,7 +559,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733908848550</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="修改类型bug">
+      <option name="closed" value="true" />
+      <created>1733975707031</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1733975707032</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="整体重构项目" />
     <MESSAGE value="增加项目介绍" />
     <MESSAGE value="首页整体布局" />
     <MESSAGE value="修正文档" />
@@ -615,6 +609,7 @@
     <MESSAGE value="开源许可" />
     <MESSAGE value="增加类型守卫" />
     <MESSAGE value="修改bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
+    <MESSAGE value="修改类型bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改类型bug" />
   </component>
 </project>
