@@ -1,27 +1,6 @@
-/*问候语*/
-import HeaderBox from "@/components/Box/HeaderBox";
 import {getLoggedInUser} from "@/lib/actions/user.action";
-import TotalBalanceBox from "@/components/Box/TotalBalanceBox";
+import HeaderBox from "@/components/Box/HeaderBox";
 import {getAccounts} from "@/lib/actions/bank.actions";
-import RecentTransactions from "@/components/Transaction/RecentTransactions";
-import {getAccount} from "@/lib/actions/ceshi";
-
-
-function Timeauto(): string {
-    const date = new Date();
-    const hours = date.getHours();
-
-    if(hours >=7 && hours <= 11){
-        return "早上好"
-    }else if(hours >=12 && hours <= 13){
-        return "中午好"
-    }else if(hours >=14 && hours <= 17){
-        return "下午好"
-    }else {
-        return "晚上好"
-    }
-}
-
 /*类型守卫*/
 function isAccount(item: any): item is Account {
     return (
@@ -45,8 +24,7 @@ function isAccountArray(value: unknown[]): value is Account[] {
     return Array.isArray(value) && value.every(isAccount);
 }
 
-
-const Home = async ({ searchParams }: SearchParamProps) => {
+const TransactionHistory = async ({ searchParams }: SearchParamProps) => {
 
     const [resolvedSearchParams] = await Promise.all([Promise.resolve(searchParams)])
 
@@ -71,7 +49,6 @@ const Home = async ({ searchParams }: SearchParamProps) => {
         )
     }
 
-    const title = Timeauto();
     const accounts = await getAccounts({
         userId: loggedIn.$id,
     });
@@ -83,7 +60,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
                 <header className="home-content">
                     <HeaderBox
                         type="greeting"
-                        title={title}
+                        title="不存在"
                         user={loggedIn?.firstName || "后端数据遇到问题,请检查后端bug日志"}
                         subtext="后台金融管理系统"
                     />
@@ -109,46 +86,45 @@ const Home = async ({ searchParams }: SearchParamProps) => {
         accountsData[0] !== null &&
         "appwriteItemId" in accountsData[0]
     ) {
-        // const appwriteItemId = (id as string) || (accountsData[0] as any).appwriteItemId;
-        console.log("获取成功")
+        const appwriteItemId = (id as string) || (accountsData[0] as any).appwriteItemId;
+        console.log("获取成功",appwriteItemId)
     } else {
         console.error("appwriteItemId获取错误.");
     }
 
     const appwriteItemId = (id as string) || (accountsData[0] as any).appwriteItemId;
-    
-    const account = await getAccount({ appwriteItemId })
 
-
+    /*测试数据*/
+    const historyData = {
+        name:"银行",
+        officialname:"详细信息",
+        mask:"0000"
+    }
 
     return (
-        <section className="home">
-            <div className="home-content">
-                <header className="home-header">
-                    <HeaderBox
-                        type="greeting"
-                        title={title}
-                        user={loggedIn?.firstName || "后端数据遇到问题,请检查后端bug日志"}
-                        subtext="后台金融管理系统"
-                    />
-                    {/*显示资金*/}
-                    <TotalBalanceBox
-                        accounts={accountsData}
-                        totalBanks={accounts?.totalBanks}
-                        totalCurrentBalance={accounts?.totalCurrentBalance as number}
-                    />
-                </header>
-
-                {/*显示交易*/}
-                <RecentTransactions
-                    accounts={accountsData}
-                    appwriteItemId={appwriteItemId}
-                    page={currentPage}
-                    transactions={[]}
+        <div className="transactions">
+            <div className="transactions-header">
+                <HeaderBox
+                    title="交易历史"
+                    subtext="查询银行的详细和历史"
                 />
             </div>
-        </section>
+
+            <div className="space-y-6">
+                <div className="transactions-account">
+                    <div className="flex flex-col gap-2">
+                        <h2 className="text-18 font-bold text-white">{historyData.name}</h2>
+                        <p className="text-14 text-blue-25">
+                            {historyData.officialname}
+                        </p>
+                        <p className="text-14 font-semibold tracking-[1.1px] text-white">
+                            ●●●● ●●●● ●●●● {historyData.mask}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 
-export default Home;
+export default TransactionHistory

@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="增加类型守卫">
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="修改bug">
+      <change afterPath="$PROJECT_DIR$/src/app/(root)/transaction-history/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/actions/ceshi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -31,7 +36,7 @@
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -172,15 +177,8 @@
       <workItem from="1733706558707" duration="12223000" />
       <workItem from="1733789166194" duration="4468000" />
       <workItem from="1733888361690" duration="2173000" />
-      <workItem from="1733890547284" duration="3068000" />
-    </task>
-    <task id="LOCAL-00001" summary="初始化">
-      <option name="closed" value="true" />
-      <created>1730798497026</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1730798497026</updated>
+      <workItem from="1733890547284" duration="4289000" />
+      <workItem from="1733965247004" duration="5366000" />
     </task>
     <task id="LOCAL-00002" summary="修改">
       <option name="closed" value="true" />
@@ -566,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733890398464</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="修改bug">
+      <option name="closed" value="true" />
+      <created>1733908848549</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1733908848550</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改bug" />
     <MESSAGE value="整体重构项目" />
     <MESSAGE value="增加项目介绍" />
     <MESSAGE value="首页整体布局" />
@@ -609,6 +614,7 @@
     <MESSAGE value="tab标题" />
     <MESSAGE value="开源许可" />
     <MESSAGE value="增加类型守卫" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加类型守卫" />
+    <MESSAGE value="修改bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
   </component>
 </project>

@@ -62,6 +62,15 @@ declare interface TotalBalanceBoxProps {
     totalCurrentBalance: number;
 }
 
+declare interface getAccountProps {
+    appwriteItemId: string;
+}
+
+declare interface getBankProps {
+    documentId: string;
+}
+
+
 /*图表*/
 declare interface DoughnutChartProps {
     accounts: Account[];
