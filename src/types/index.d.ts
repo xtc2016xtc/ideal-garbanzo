@@ -75,6 +75,12 @@ declare interface DoughnutChartProps {
     accounts: Account[];
 }
 
+declare interface BankTabItemProps {
+    account: Account;
+    appwriteItemId?: string;
+}
+
+
 declare type Transaction = {
     id: string;
     $id: string;
