@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="交易记录">
-      <change afterPath="$PROJECT_DIR$/src/app/(root)/my-banks/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(root)/payment-transfer/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TabItem/BankTabItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Transaction/RecentTransactions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Transaction/RecentTransactions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/actions/ceshi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/ceshi.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,15 +174,8 @@
       <workItem from="1733888361690" duration="2173000" />
       <workItem from="1733890547284" duration="4289000" />
       <workItem from="1733965247004" duration="8510000" />
-      <workItem from="1734051765741" duration="6389000" />
-    </task>
-    <task id="LOCAL-00005" summary="添加配置">
-      <option name="closed" value="true" />
-      <created>1730803247472</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1730803247472</updated>
+      <workItem from="1734051765741" duration="6458000" />
+      <workItem from="1734262518454" duration="295000" />
     </task>
     <task id="LOCAL-00006" summary="添加配置">
       <option name="closed" value="true" />
@@ -576,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733997935659</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="交易记录">
+      <option name="closed" value="true" />
+      <created>1734083762435</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1734083762436</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

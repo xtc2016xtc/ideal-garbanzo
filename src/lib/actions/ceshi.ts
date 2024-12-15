@@ -43,6 +43,10 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
            console.error("No account found for appwriteItemId", appwriteItemId);
        }
 
+       if(accountData === undefined) {
+           return "后台没有交易记录 or 授权已失效'授权日期2024-10月12号致2024年12月15号结束[请联系客户重新授权]'"
+       }
+
 
     }catch (error){
         console.error(error)
