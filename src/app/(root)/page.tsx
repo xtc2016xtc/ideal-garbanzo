@@ -204,7 +204,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
             transactions.push({
                 id: `${i + 1}`,
                 $id: `transaction_${i + 1}`,
-                name: `User ${i + 1}`,
+                name: `user ${i + 1}`,
                 paymentChannel: ["online_bank_transfer", "credit_card", "paypal"][i % 3],
                 accountId: `account_${i + 1}`,
                 amount: Math.random() * 500, // 随机金额
