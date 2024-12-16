@@ -74,12 +74,42 @@ declare interface getBankProps {
 declare interface DoughnutChartProps {
     accounts: Account[];
 }
+declare interface BankInfoProps {
+    account: Account;
+    appwriteItemId?: string;
+    type: "full" | "card";
+}
+declare interface PaginationProps {
+    page: number;
+    totalPages: number;
+}
+
+declare interface TransactionTableProps {
+    transactions: Transaction[];
+}
+declare interface CategoryBadgeProps {
+    category: string;
+}
+
+declare type AccountTypes =
+    | "depository"
+    | "credit"
+    | "loan "
+    | "investment"
+    | "other";
+
+declare type Category = "Food and Drink" | "Travel" | "Transfer";
 
 declare interface BankTabItemProps {
     account: Account;
     appwriteItemId?: string;
 }
-
+declare interface getTransactionsByBankIdProps {
+    bankId: string;
+}
+declare interface getTransactionsProps {
+    accessToken: string;
+}
 
 declare type Transaction = {
     id: string;

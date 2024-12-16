@@ -250,8 +250,20 @@
   .transactions-account-balance {
     @apply flex-center flex-col  gap-2 rounded-md bg-blue-25/20 px-4 py-2 text-white;
   }
+
   .banktab-item {
     @apply gap-[18px] border-b-2 flex px-2 sm:px-4 py-2 transition-all;
+  }
+
+  .bank-info {
+    @apply gap-[18px] flex p-4 transition-all border bg-blue-25 border-transparent;
+  }
+
+  .bank-info_content {
+    @apply flex flex-1 items-center justify-between gap-2 overflow-hidden;
+  }
+  .category-badge {
+    @apply flex-center truncate w-fit gap-1 rounded-2xl border-[1.5px] py-[2px] pl-1.5 pr-2;
   }
 
 }

@@ -25,7 +25,6 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
                     id: accountData.account_id,
                     availableBalance: accountData.balances.available!,
                     currentBalance: accountData.balances.current!,
-                    // @ts-ignore
                     institutionId: institution.institution_id,
                     name: accountData.name,
                     officialName: accountData.official_name,
@@ -39,7 +38,6 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
         )
         const totalBanks = accounts.length;
         const totalCurrentBalance = accounts.reduce((total, account) => {
-            // @ts-ignore
             return total + account.currentBalance;
         }, 0);
 

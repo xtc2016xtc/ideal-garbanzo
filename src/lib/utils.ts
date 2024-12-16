@@ -7,6 +7,59 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export function formatAmount(amount: number): string {
+  const formatter = new Intl.NumberFormat("zh-CN", {
+    style: "currency",
+    currency: "CNY",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+
+  return formatter.format(amount);
+}
+
+export const removeSpecialCharacters = (value: string) => {
+  return value.replace(/[^\w\s]/gi, "");
+};
+
+export const getTransactionStatus = (date: Date) => {
+  const today = new Date();
+  const twoDaysAgo = new Date(today);
+  twoDaysAgo.setDate(today.getDate() - 2);
+
+  return date > twoDaysAgo ? "Processing" : "Success";
+};
+
+
+export function getAccountTypeColors(type: AccountTypes) {
+  switch (type) {
+    case "depository":
+      return {
+        bg: "bg-blue-25",
+        lightBg: "bg-blue-100",
+        title: "text-blue-900",
+        subText: "text-blue-700",
+      };
+
+    case "credit":
+      return {
+        bg: "bg-success-25",
+        lightBg: "bg-success-100",
+        title: "text-success-900",
+        subText: "text-success-700",
+      };
+
+    default:
+      return {
+        bg: "bg-green-25",
+        lightBg: "bg-green-100",
+        title: "text-green-900",
+        subText: "text-green-700",
+      };
+  }
+}
+
+
 /* 转码 */
 export const parseStringify = <T>(value: T): T => {
   try {

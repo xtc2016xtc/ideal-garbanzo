@@ -1,8 +1,21 @@
 import Link from "next/link";
-import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BankTabItem} from "@/components/TabItem/BankTabItem";
+import BankInfo from "@/components/Info/BankInfo";
+import TransactionsTable from "@/components/Table/TransactionsTable";
+import {Pagination} from "@/components/pagintion/Pagination";
 
 const RecentTransactions = ({accounts,transactions = [],appwriteItemId,page = 1}:RecentTransactionsProps) => {
+
+    const rowsPerPage = 10;
+    const totalPages = Math.ceil(transactions.length / rowsPerPage);
+    const indexOfLastTransaction = page * rowsPerPage;
+    const indexOfFirstTransaction = indexOfLastTransaction - rowsPerPage;
+    const currentTransactions = transactions.slice(
+        indexOfFirstTransaction, indexOfLastTransaction
+    )
+
+
     return (
         <section className="recent-transactions">
             <header className="flex items-center justify-between">
@@ -25,9 +38,36 @@ const RecentTransactions = ({accounts,transactions = [],appwriteItemId,page = 1}
                             />
                         </TabsTrigger>
                     ))}
-
-
                 </TabsList>
+
+                {accounts.map((account, Account) => (
+                    <TabsContent
+                        value={account.appwriteItemId}
+                        key={account.id}
+                        className="space-y-4"
+                    >
+
+                    <BankInfo
+                        account={account}
+                        appwriteItemId={appwriteItemId}
+                        type="full"
+                    />
+                         {/*测试*/}
+                        {/*<TransactionsTable transactions={currentTransactions}/>*/}
+
+                        {currentTransactions.length > 0 ? (
+                            <TransactionsTable transactions={currentTransactions}/>
+                        ):(
+                            <div>数据库没有交易数据，请重新授权或检测数据库</div>
+                        )}
+
+                        {totalPages > 1 && (
+                            <div className="my-4 w-full">
+                                <Pagination page={page} totalPages={totalPages}/>
+                            </div>
+                        )}
+                    </TabsContent>
+                ))}
             </Tabs>
         </section>
     )

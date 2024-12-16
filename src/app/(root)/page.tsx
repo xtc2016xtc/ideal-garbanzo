@@ -119,7 +119,111 @@ const Home = async ({ searchParams }: SearchParamProps) => {
     
     const account = await getAccount({ appwriteItemId })
 
+    console.log("数据",account)
 
+    /*测试数据*/
+    // const transactions: Transaction = {
+    //     id: "1234567890",
+    //     $id: "transaction_001",
+    //     name: "John Doe",
+    //     paymentChannel: "online_bank_transfer",
+    //     accountId: "account_9876543210",
+    //     amount: 150.00,
+    //     pending: true,
+    //     category: "Utilities",
+    //     date: "2024-12-15T14:48:00Z",
+    //     image: "https://example.com/images/receipt.jpg",
+    //     type: "debit",
+    //     $createdAt: "2024-12-15T14:48:00Z",
+    //     channel: "mobile_app",
+    //     senderBankId: "bank_sender_123",
+    //     receiverBankId: "bank_receiver_456"
+    // };
+
+    /* 多条测试数据 */
+    // const transactions: Transaction[] = [
+    //     {
+    //         id: "1234567890",
+    //         $id: "transaction_001",
+    //         name: "John Doe",
+    //         paymentChannel: "online_bank_transfer",
+    //         accountId: "account_9876543210",
+    //         amount: 150.00,
+    //         pending: true,
+    //         category: "Utilities",
+    //         date: "2024-12-15T14:48:00Z",
+    //         image: "https://example.com/images/receipt.jpg",
+    //         type: "debit",
+    //         $createdAt: "2024-12-15T14:48:00Z",
+    //         channel: "mobile_app",
+    //         senderBankId: "bank_sender_123",
+    //         receiverBankId: "bank_receiver_456"
+    //     },
+    //     {
+    //         id: "0987654321",
+    //         $id: "transaction_002",
+    //         name: "Jane Smith",
+    //         paymentChannel: "credit_card",
+    //         accountId: "account_0987654321",
+    //         amount: 200.00,
+    //         pending: false,
+    //         category: "Shopping",
+    //         date: "2024-12-14T10:30:00Z",
+    //         image: "https://example.com/images/receipt2.jpg",
+    //         type: "credit",
+    //         $createdAt: "2024-12-14T10:30:00Z",
+    //         channel: "web",
+    //         senderBankId: "bank_sender_456",
+    //         receiverBankId: "bank_receiver_789"
+    //     },
+    //     {
+    //         id: "1122334455",
+    //         $id: "transaction_003",
+    //         name: "Alice Johnson",
+    //         paymentChannel: "paypal",
+    //         accountId: "account_1122334455",
+    //         amount: 75.50,
+    //         pending: false,
+    //         category: "Entertainment",
+    //         date: "2024-12-13T08:15:00Z",
+    //         image: "https://example.com/images/receipt3.jpg",
+    //         type: "debit",
+    //         $createdAt: "2024-12-13T08:15:00Z",
+    //         channel: "desktop_app",
+    //         senderBankId: "bank_sender_789",
+    //         receiverBankId: "bank_receiver_123"
+    //     },
+    //     // 你可以继续添加更多的交易记录
+    // ];
+
+    /*动态生成*/
+    function generateTransactions(count: number): Transaction[] {
+        const transactions: Transaction[] = [];
+
+        for (let i = 0; i < count; i++) {
+            transactions.push({
+                id: `${i + 1}`,
+                $id: `transaction_${i + 1}`,
+                name: `User ${i + 1}`,
+                paymentChannel: ["online_bank_transfer", "credit_card", "paypal"][i % 3],
+                accountId: `account_${i + 1}`,
+                amount: Math.random() * 500, // 随机金额
+                pending: i % 2 === 0, // 每隔一条记录设置为 pending
+                category: ["Utilities", "Shopping", "Entertainment"][i % 3],
+                date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString(), // 逐天递减的日期
+                image: `https://example.com/images/receipt${i + 1}.jpg`,
+                type: i % 2 === 0 ? "debit" : "credit",
+                $createdAt: new Date().toISOString(),
+                channel: ["mobile_app", "web", "desktop_app"][i % 3],
+                senderBankId: `bank_sender_${i + 1}`,
+                receiverBankId: `bank_receiver_${i + 1}`
+            });
+        }
+
+        return transactions;
+    }
+
+    const transactions = generateTransactions(10); // 生成多条测试数据
 
     return (
         <section className="home">
@@ -144,7 +248,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
                     accounts={accountsData}
                     appwriteItemId={appwriteItemId}
                     page={currentPage}
-                    transactions={[]}
+                    transactions={transactions}
                 />
             </div>
         </section>
