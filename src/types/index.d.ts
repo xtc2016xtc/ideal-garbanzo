@@ -55,7 +55,11 @@ declare type Account = {
     appwriteItemId: string;
     shareableId: string;
 };
-
+declare type CategoryCount = {
+    name: string;
+    count: number;
+    totalCount: number;
+};
 declare interface TotalBalanceBoxProps {
     accounts: Account[];
     totalBanks: number;
@@ -82,6 +86,12 @@ declare interface BankInfoProps {
 declare interface PaginationProps {
     page: number;
     totalPages: number;
+}
+
+declare interface RightSidebarProps {
+    user: User;
+    transactions: Transaction[];
+    banks: Bank[] & Account[];
 }
 
 declare interface TransactionTableProps {

@@ -2,9 +2,10 @@
 import HeaderBox from "@/components/Box/HeaderBox";
 import {getLoggedInUser} from "@/lib/actions/user.action";
 import TotalBalanceBox from "@/components/Box/TotalBalanceBox";
-import {getAccounts} from "@/lib/actions/bank.actions";
+import {getAccount, getAccounts} from "@/lib/actions/bank.actions";
 import RecentTransactions from "@/components/Transaction/RecentTransactions";
-import {getAccount} from "@/lib/actions/ceshi";
+import RightSidebar from "@/components/Sidebar/RightSidebar";
+
 
 
 function Timeauto(): string {
@@ -251,6 +252,15 @@ const Home = async ({ searchParams }: SearchParamProps) => {
                     transactions={transactions}
                 />
             </div>
+
+            {/*基础信息显示*/}
+            <RightSidebar
+                //@ts-ignore
+                user={loggedIn}
+                transactions={transactions}
+                //@ts-ignore
+                banks={accountsData?.slice(0, 2)}
+            />
         </section>
     );
 }
