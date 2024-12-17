@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="动态生成多条数据">
-      <change afterPath="$PROJECT_DIR$/src/components/Sidebar/RightSidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/actions/transaction.actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/test/function/function.banks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/test/functionTestingComponent/Testing.tsx" afterDir="false" />
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="显示账户信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/actions/ceshi.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/actions/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/user.action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,15 +178,7 @@
       <workItem from="1734307350134" duration="2922000" />
       <workItem from="1734310311936" duration="1516000" />
       <workItem from="1734311854407" duration="10608000" />
-      <workItem from="1734395533301" duration="5290000" />
-    </task>
-    <task id="LOCAL-00008" summary="修改bug">
-      <option name="closed" value="true" />
-      <created>1730972577221</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1730972577221</updated>
+      <workItem from="1734395533301" duration="9609000" />
     </task>
     <task id="LOCAL-00009" summary="修改bug">
       <option name="closed" value="true" />
@@ -582,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734344444568</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="显示账户信息">
+      <option name="closed" value="true" />
+      <created>1734408965068</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1734408965068</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修正文档" />
     <MESSAGE value="调整tailwindcss配置" />
     <MESSAGE value="居中调整" />
     <MESSAGE value="布局调整" />
@@ -625,6 +614,7 @@
     <MESSAGE value="修改类型bug" />
     <MESSAGE value="交易记录" />
     <MESSAGE value="动态生成多条数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="动态生成多条数据" />
+    <MESSAGE value="显示账户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="显示账户信息" />
   </component>
 </project>
