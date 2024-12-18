@@ -22,6 +22,7 @@ declare type User = {
     ssn: string;
 };
 
+
 declare type Bank = {
     $id: string;
     accountId: string;
@@ -89,7 +90,7 @@ declare interface PaginationProps {
 }
 
 declare interface RightSidebarProps {
-    user: User;
+    user:User;
     transactions: Transaction[];
     banks: Bank[] & Account[];
 }

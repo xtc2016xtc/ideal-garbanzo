@@ -1,4 +1,3 @@
-/*问候语*/
 import HeaderBox from "@/components/Box/HeaderBox";
 import {getLoggedInUser} from "@/lib/actions/user.action";
 import TotalBalanceBox from "@/components/Box/TotalBalanceBox";
@@ -6,8 +5,7 @@ import {getAccount, getAccounts} from "@/lib/actions/bank.actions";
 import RecentTransactions from "@/components/Transaction/RecentTransactions";
 import RightSidebar from "@/components/Sidebar/RightSidebar";
 
-
-
+/*问候语*/
 function Timeauto(): string {
     const date = new Date();
     const hours = date.getHours();
@@ -120,7 +118,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
     
     const account = await getAccount({ appwriteItemId })
 
-    console.log("数据",account)
+    console.log("数据api已过期",account)
 
     /*测试数据*/
     // const transactions: Transaction = {
@@ -226,6 +224,24 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
     const transactions = generateTransactions(10); // 生成多条测试数据
 
+    /*缺保符合要求*/
+    const user: User = {
+        $id: loggedIn.$id || "",
+        email: loggedIn.email || "",
+        userId: loggedIn.userId || "",
+        dwollaCustomerUrl: loggedIn.dwollaCustomerUrl || "",
+        dwollaCustomerId: loggedIn.dwollaCustomerId || "",
+        firstName: loggedIn.firstName || "",
+        lastName: loggedIn.lastName || "",
+        name: loggedIn.name || "",
+        address1: loggedIn.address1 || "",
+        city: loggedIn.city || "",
+        state: loggedIn.state || "",
+        postalCode: loggedIn.postalCode || "",
+        dateOfBirth: loggedIn.dateOfBirth || "",
+        ssn: loggedIn.ssn || ""
+    };
+
     return (
         <section className="home">
             <div className="home-content">
@@ -255,11 +271,9 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
             {/*基础信息显示*/}
             <RightSidebar
-                //@ts-ignore
-                user={loggedIn}
+                user={user}
                 transactions={transactions}
-                //@ts-ignore
-                banks={accountsData?.slice(0, 2)}
+                banks={accountsData?.slice(0, 2) as any}
             />
         </section>
     );

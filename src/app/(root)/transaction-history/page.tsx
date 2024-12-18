@@ -1,6 +1,9 @@
 import {getLoggedInUser} from "@/lib/actions/user.action";
 import HeaderBox from "@/components/Box/HeaderBox";
-import {getAccounts} from "@/lib/actions/bank.actions";
+import {getAccount, getAccounts} from "@/lib/actions/bank.actions";
+import {formatAmount} from "@/lib/utils";
+import {Pagination} from "@/components/pagintion/Pagination";
+import TransactionsTable from "@/components/Table/TransactionsTable";
 /*类型守卫*/
 function isAccount(item: any): item is Account {
     return (
@@ -94,11 +97,67 @@ const TransactionHistory = async ({ searchParams }: SearchParamProps) => {
 
     const appwriteItemId = (id as string) || (accountsData[0] as any).appwriteItemId;
 
+    const account = await getAccount({ appwriteItemId })
+
+    console.log("accountApi已过期",account)
+
+    /*未过期*/
+  /*  const rowsPerPage = 10;
+    const totalPages = Math.ceil(account?.transactions.length / rowsPerPage);
+
+    const indexOfLastTransaction = currentPage * rowsPerPage;
+    const indexOfFirstTransaction = indexOfLastTransaction - rowsPerPage;
+
+    const currentTransactions = account?.transactions.slice(
+        indexOfFirstTransaction, indexOfLastTransaction
+    )*/
+
+    /*已过期：模拟数据*/
+    function generateTransactions(count: number): Transaction[] {
+        const transactions: Transaction[] = [];
+
+        for (let i = 0; i < count; i++) {
+            transactions.push({
+                id: `${i + 1}`,
+                $id: `transaction_${i + 1}`,
+                name: `user ${i + 1}`,
+                paymentChannel: ["online_bank_transfer", "credit_card", "paypal"][i % 3],
+                accountId: `account_${i + 1}`,
+                amount: Math.random() * 500, // 随机金额
+                pending: i % 2 === 0, // 每隔一条记录设置为 pending
+                category: ["Utilities", "Shopping", "Entertainment"][i % 3],
+                date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString(), // 逐天递减的日期
+                image: `https://example.com/images/receipt${i + 1}.jpg`,
+                type: i % 2 === 0 ? "debit" : "credit",
+                $createdAt: new Date().toISOString(),
+                channel: ["mobile_app", "web", "desktop_app"][i % 3],
+                senderBankId: `bank_sender_${i + 1}`,
+                receiverBankId: `bank_receiver_${i + 1}`
+            });
+        }
+
+        return transactions;
+    }
+
+    const transactions = generateTransactions(10); // 生成多条测试数据
+
+
+    const rowsPerPage = 10;
+    const totalPages = Math.ceil(transactions.length / rowsPerPage);
+
+    const indexOfLastTransaction = currentPage * rowsPerPage;
+    const indexOfFirstTransaction = indexOfLastTransaction - rowsPerPage;
+
+    const currentTransactions = transactions.slice(
+        indexOfFirstTransaction, indexOfLastTransaction
+    )
+
     /*测试数据*/
     const historyData = {
         name:"银行",
         officialname:"详细信息",
-        mask:"0000"
+        mask:"0000",
+        currentBalance:8000
     }
 
     return (
@@ -121,7 +180,23 @@ const TransactionHistory = async ({ searchParams }: SearchParamProps) => {
                             ●●●● ●●●● ●●●● {historyData.mask}
                         </p>
                     </div>
+
+                    <div className='transactions-account-balance'>
+                        <p className="text-14">当前余额</p>
+                        <p className="text-24 text-center font-bold">{formatAmount(historyData.currentBalance)}</p>
+                    </div>
                 </div>
+
+                <section className="flex w-full flex-col gap-6">
+                    <TransactionsTable
+                        transactions={currentTransactions}
+                    />
+                    {totalPages > 1 && (
+                        <div className="my-4 w-full">
+                            <Pagination totalPages={totalPages} page={currentPage}/>
+                        </div>
+                    )}
+                </section>
             </div>
         </div>
     );
