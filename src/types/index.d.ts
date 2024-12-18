@@ -93,6 +93,15 @@ declare interface RightSidebarProps {
     transactions: Transaction[];
     banks: Bank[] & Account[];
 }
+declare interface CategoryProps {
+    category: CategoryCount;
+}
+
+declare interface CreditCardProps {
+    account: Account;
+    userName: string;
+    showBalance?: boolean;
+}
 
 declare interface TransactionTableProps {
     transactions: Transaction[];

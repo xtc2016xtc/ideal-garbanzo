@@ -1,6 +1,8 @@
 import {countTransactionCategories} from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import BankCard from "@/components/card/BankCard";
+import Category from "@/components/card/Category";
 
 const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
     const categories: CategoryCount[] = countTransactionCategories(transactions);
@@ -43,21 +45,21 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
                 {banks?.length > 0 && (
                     <div className="relative flex flex-1 flex-col items-center justify-center gap-5">
                         <div className='relative z-10'>
-                            {/*<BankCard*/}
-                            {/*    key={banks[0].$id}*/}
-                            {/*    account={banks[0]}*/}
-                            {/*    userName={`${user.firstName} ${user.lastName}`}*/}
-                            {/*    showBalance={false}*/}
-                            {/*/>*/}
+                            <BankCard
+                                key={banks[0].$id}
+                                account={banks[0]}
+                                userName={`${user.firstName} ${user.lastName}`}
+                                showBalance={false}
+                            />
                         </div>
                         {banks[1] && (
                             <div className="absolute right-0 top-8 z-0 w-[90%]">
-                                {/*<BankCard*/}
-                                {/*    key={banks[1].$id}*/}
-                                {/*    account={banks[1]}*/}
-                                {/*    userName={`${user.firstName} ${user.lastName}`}*/}
-                                {/*    showBalance={false}*/}
-                                {/*/>*/}
+                                <BankCard
+                                    key={banks[1].$id}
+                                    account={banks[1]}
+                                    userName={`${user.firstName} ${user.lastName}`}
+                                    showBalance={false}
+                                />
                             </div>
                         )}
                     </div>
@@ -66,15 +68,15 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
                 <div className="mt-10 flex flex-1 flex-col gap-6">
                     <h2 className="header-2">交易分类</h2>
 
-                    {/*{categories.length > 0 ? (*/}
-                    {/*    <div className='space-y-5'>*/}
-                    {/*        {categories.map((category, index) => (*/}
-                    {/*            <Category key={category.name} category={category}/>*/}
-                    {/*        ))}*/}
-                    {/*    </div>*/}
-                    {/*) : (*/}
-                    {/*    <p className="text-gray-600">暂无交易分类。</p>*/}
-                    {/*)}*/}
+                    {categories.length > 0 ? (
+                        <div className='space-y-5'>
+                            {categories.map((category, index) => (
+                                <Category key={category.name} category={category}/>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-gray-600">暂无交易分类。</p>
+                    )}
                 </div>
             </section>
         </aside>

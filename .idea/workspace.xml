@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="显示账户信息">
+    <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="右侧账户信息">
+      <change afterPath="$PROJECT_DIR$/src/components/card/BankCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card/Category.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card/Copy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/RightSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/RightSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,15 +188,7 @@
       <workItem from="1734310311936" duration="1516000" />
       <workItem from="1734311854407" duration="10608000" />
       <workItem from="1734395533301" duration="10551000" />
-      <workItem from="1734482932977" duration="5698000" />
-    </task>
-    <task id="LOCAL-00011" summary="编写文档">
-      <option name="closed" value="true" />
-      <created>1731318047466</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1731318047467</updated>
+      <workItem from="1734482932977" duration="7573000" />
     </task>
     <task id="LOCAL-00012" summary="修改缺少的一部分文档（部分内容）">
       <option name="closed" value="true" />
@@ -575,7 +574,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734427076731</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="右侧账户信息">
+      <option name="closed" value="true" />
+      <created>1734495359184</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1734495359185</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +600,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="调整tailwindcss配置" />
     <MESSAGE value="居中调整" />
     <MESSAGE value="布局调整" />
     <MESSAGE value="调整" />
@@ -618,6 +624,7 @@
     <MESSAGE value="交易记录" />
     <MESSAGE value="动态生成多条数据" />
     <MESSAGE value="显示账户信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="显示账户信息" />
+    <MESSAGE value="右侧账户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="右侧账户信息" />
   </component>
 </project>
