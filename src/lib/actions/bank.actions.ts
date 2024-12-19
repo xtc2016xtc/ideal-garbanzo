@@ -50,22 +50,8 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
     }
 };
 
-export const getInstitution = async ({
-                                         institutionId,
-                                     }: getInstitutionProps) => {
-    try {
-        const institutionResponse = await plaidClient.institutionsGetById({
-            institution_id: institutionId,
-            country_codes: ["US"] as CountryCode[],
-        });
 
-        const intitution = institutionResponse.data.institution;
 
-        return parseStringify(intitution);
-    } catch (error) {
-        console.error("An error occurred while getting the accounts:", error);
-    }
-};
 
 export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     try {
@@ -79,16 +65,21 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
             access_token: bank?.accessToken
         });
 
+        console.log("access_token", bank.accessToken);
+
         const accountData = accountsResponse.data.accounts[0];
 
         if (!accountData) {
             console.error("No account found for appwriteItemId", appwriteItemId);
         }
 
+
         const transferTransactionsData = await getTransactionsByBankId({
             bankId: bank.$id,
         });
 
+
+        console.log("data数据",transferTransactionsData)
 
         if(!transferTransactionsData || transferTransactionsData.documents === null){
             console.log("数据库，没有交易数据或者用户账户授权")
@@ -149,6 +140,24 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     }
 }
 
+export const getInstitution = async ({
+                                         institutionId,
+                                     }: getInstitutionProps) => {
+    try {
+        const institutionResponse = await plaidClient.institutionsGetById({
+            institution_id: institutionId,
+            country_codes: ["US"] as CountryCode[],
+        });
+
+        const intitution = institutionResponse.data.institution;
+
+        return parseStringify(intitution);
+    } catch (error) {
+        console.error("An error occurred while getting the accounts:", error);
+    }
+};
+
+
 export const getTransactions = async ({
                                           accessToken,
                                       }: getTransactionsProps) => {
@@ -162,7 +171,11 @@ export const getTransactions = async ({
                 access_token: accessToken,
             });
 
+
+
             const data = response.data;
+
+            console.log("交易数据",data)
 
             transactions = response.data.added.map((transaction) => ({
                 id: transaction.transaction_id,

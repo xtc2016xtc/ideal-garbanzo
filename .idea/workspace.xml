@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="转账操作">
+      <change afterPath="$PROJECT_DIR$/src/components/Form/PaymentTransferForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/card/BankDropdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/textarea.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(root)/payment-transfer/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/payment-transfer/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(root)/transaction-history/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/transaction-history/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/plaid.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/plaid.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/test/function/function.banks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/test/function/function.banks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/test/functionTestingComponent/Testing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/test/functionTestingComponent/Testing.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,15 +192,8 @@
       <workItem from="1734310311936" duration="1516000" />
       <workItem from="1734311854407" duration="10608000" />
       <workItem from="1734395533301" duration="10551000" />
-      <workItem from="1734482932977" duration="14816000" />
-    </task>
-    <task id="LOCAL-00013" summary="修改bug">
-      <option name="closed" value="true" />
-      <created>1731404435360</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1731404435360</updated>
+      <workItem from="1734482932977" duration="15877000" />
+      <workItem from="1734570200981" duration="10568000" />
     </task>
     <task id="LOCAL-00014" summary="修改bug">
       <option name="closed" value="true" />
@@ -578,7 +579,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734497383565</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="转账操作">
+      <option name="closed" value="true" />
+      <created>1734519477511</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1734519477511</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

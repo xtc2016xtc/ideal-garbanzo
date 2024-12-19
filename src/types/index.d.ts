@@ -67,6 +67,9 @@ declare interface TotalBalanceBoxProps {
     totalCurrentBalance: number;
 }
 
+declare interface PaymentTransferFormProps {
+    accounts: Account[];
+}
 declare interface getAccountProps {
     appwriteItemId: string;
 }
@@ -84,6 +87,13 @@ declare interface BankInfoProps {
     appwriteItemId?: string;
     type: "full" | "card";
 }
+
+declare interface BankDropdownProps {
+    accounts: Account[];
+    setValue?: UseFormSetValue<any>;
+    otherStyles?: string;
+}
+
 declare interface PaginationProps {
     page: number;
     totalPages: number;

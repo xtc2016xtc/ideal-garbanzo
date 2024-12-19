@@ -99,7 +99,7 @@ const TransactionHistory = async ({ searchParams }: SearchParamProps) => {
 
     const account = await getAccount({ appwriteItemId })
 
-    console.log("accountApi已过期",account)
+    // console.log("accountApi已过期",account)
 
     /*未过期*/
   /*  const rowsPerPage = 10;

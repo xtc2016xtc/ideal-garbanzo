@@ -1,6 +1,7 @@
 import {getLoggedInUser} from "@/lib/actions/user.action";
 import HeaderBox from "@/components/Box/HeaderBox";
 import {getAccounts} from "@/lib/actions/bank.actions";
+import PaymentTransferForm from "@/components/Form/PaymentTransferForm";
 
 const Transfer = async ()  => {
 
@@ -41,6 +42,8 @@ const Transfer = async ()  => {
         )
     }
 
+    const accountsData = (accounts?.data as Account[]);
+
 
     return (
         <section className="payment-transfer">
@@ -50,7 +53,7 @@ const Transfer = async ()  => {
             />
 
             <section className="size-full pt-5">
-                PaymentTransferForm
+                <PaymentTransferForm accounts={accountsData} />
             </section>
         </section>
     )
