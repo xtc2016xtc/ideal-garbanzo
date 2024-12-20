@@ -1,6 +1,9 @@
 import { Configuration, PlaidApi, PlaidEnvironments } from 'plaid';
 
 const configuration = new Configuration({
+    username: process.env.PLAID_USERNAME,
+    password: process.env.PLAID_PASSWORD,
+    accessToken: process.env.PLAID_ACCESS_TOKEN,
     basePath: PlaidEnvironments.sandbox,
     baseOptions: {
         headers: {
@@ -10,5 +13,7 @@ const configuration = new Configuration({
         }
     }
 })
+
+// console.log("configurations", configuration)
 
 export const plaidClient = new PlaidApi(configuration);

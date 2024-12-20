@@ -5,6 +5,70 @@ import {getBank, getBanks} from "@/lib/actions/user.action";
 import {parseStringify} from "@/lib/utils";
 import {CountryCode} from "plaid";
 import {getTransactionsByBankId} from "@/lib/actions/transaction.actions";
+import {createAdminClient} from "@/lib/appwrite";
+import {ID} from "node-appwrite";
+/*重新获取token*/
+/*const fetchAccessToken = async () => {
+    const clientId = "g4lLOzeDPtEfsmYNQGW3ml0i80c2ikeqGtUSHrG0rFrUMmXtnr";
+    const clientSecret = "kpuoRTEviEtiDO97hX3NCRzcwarP0VQ56iRIuTaREmoBZat0tE";
+
+    const response = await fetch("https://api-sandbox.dwolla.com/token", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+            grant_type: "client_credentials",
+            client_id: clientId,
+            client_secret: clientSecret,
+        }),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+        console.log("New access token:", data.access_token);
+        return data.access_token;
+    } else {
+        console.error("Failed to generate access token:", data);
+        return null;
+    }
+};
+
+// 调用函数获取新 token
+const accessToken = await fetchAccessToken();*/
+
+// 使用老 Token 验证
+// const oldAccessToken = "J2vy2t3nnLjuoXEhJfgCiozAYWbR1huNnlJfoDwSRjK5tLTgL1"; // 替换为老 Token
+// const validateToken = async (accessToken: string) => {
+//     const url = "https://api-sandbox.dwolla.com/funding-sources/bbc16127-38eb-4810-9d93-a13282eb006f"; // 替换为受保护资源的 URL
+//
+//     try {
+//         const response = await fetch(url, {
+//             method: "GET",
+//             headers: {
+//                 Authorization: `Bearer ${accessToken}`,
+//                 Accept: "application/vnd.dwolla.v1.hal+json",
+//             },
+//         });
+//
+//         if (response.ok) {
+//             const data = await response.json();
+//             console.log("Token is valid. Response data:", data);
+//             return true;
+//         } else {
+//             const error = await response.json();
+//             console.error("Token validation failed:", error);
+//             return false;
+//         }
+//     } catch (error) {
+//         console.error("Error validating token:", error);
+//         return false;
+//     }
+// };
+//
+//
+// validateToken(oldAccessToken);
+
 
 
 export const getAccounts = async ({ userId }: getAccountsProps) => {
@@ -51,11 +115,11 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
 };
 
 
-
-
 export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     try {
         const bank = await getBank({ documentId: appwriteItemId })
+
+        // console.log("bank",bank)
 
         if (!bank) {
             console.error("No account found for appwriteItemId", appwriteItemId);
@@ -65,7 +129,7 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
             access_token: bank?.accessToken
         });
 
-        console.log("access_token", bank.accessToken);
+        console.log("access_token ", bank?.accessToken);
 
         const accountData = accountsResponse.data.accounts[0];
 
@@ -79,7 +143,10 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
         });
 
 
-        console.log("data数据",transferTransactionsData)
+        console.log("传递的 bankId:", bank.$id);
+        console.log("返回的 transferTransactionsData:",typeof transferTransactionsData);
+        // 确保是字符串或与数据库字段类型一致
+
 
         if(!transferTransactionsData || transferTransactionsData.documents === null){
             console.log("数据库，没有交易数据或者用户账户授权")

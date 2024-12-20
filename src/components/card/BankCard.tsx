@@ -6,6 +6,8 @@ import Copy from "@/components/card/Copy";
 const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) => {
     return (
         <div className="flex flex-col">
+            {showBalance && <Copy title={account?.shareableId} />}
+
             <Link href={`/transaction-history/?id=${account.appwriteItemId}`} className="bank-card">
                 <div className="bank-card_content">
                     <div>
@@ -57,7 +59,7 @@ const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) =>
                 />
             </Link>
 
-            {showBalance && <Copy title={account?.shareableId} />}
+
         </div>
     )
 }

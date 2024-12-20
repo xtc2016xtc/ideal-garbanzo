@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad08227-f2aa-42ef-b1af-b51e1b55bba7" name="更改" comment="转账操作">
-      <change afterPath="$PROJECT_DIR$/src/components/Form/PaymentTransferForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card/BankDropdown.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/select.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/textarea.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(root)/payment-transfer/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/payment-transfer/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(root)/my-banks/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/my-banks/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(root)/transaction-history/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(root)/transaction-history/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/BankCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/BankCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/Copy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/Copy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/bank.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/actions/dwolla.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/dwolla.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/actions/transaction.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/actions/transaction.actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/plaid.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/plaid.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/test/function/function.banks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/test/function/function.banks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/test/functionTestingComponent/Testing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/test/functionTestingComponent/Testing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +89,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app\(root)\transaction-historys" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\lib\test\function" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\lib\test" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src" />
       <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app\(root)" />
-      <recent name="F:\projectXTC\Ruest\poject\webstron\ideal-garbanzo\src\app" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -193,15 +191,8 @@
       <workItem from="1734311854407" duration="10608000" />
       <workItem from="1734395533301" duration="10551000" />
       <workItem from="1734482932977" duration="15877000" />
-      <workItem from="1734570200981" duration="10568000" />
-    </task>
-    <task id="LOCAL-00014" summary="修改bug">
-      <option name="closed" value="true" />
-      <created>1731404711358</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1731404711358</updated>
+      <workItem from="1734570200981" duration="22216000" />
+      <workItem from="1734653959353" duration="5302000" />
     </task>
     <task id="LOCAL-00015" summary="整体重构项目">
       <option name="closed" value="true" />
@@ -587,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734519477511</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="转账操作">
+      <option name="closed" value="true" />
+      <created>1734592223059</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1734592223059</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
